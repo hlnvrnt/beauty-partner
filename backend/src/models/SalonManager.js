@@ -2,11 +2,53 @@ const AbstractManager = require("./AbstractManager");
 
 class SalonManager extends AbstractManager {
   constructor() {
-    super({ table: "user" });
+    super({ table: "Salon" });
   }
 
+  async read(id) {
+    const [result] = await this.database.query(
+      `SELECT * FROM ${this.table} WHERE id=?`,
+      [id]
+    );
+    return result;
+  }
+
+  async updatePointById({ id, point }) {
+    const [result] = await this.database.query(
+      `UPDATE ${this.table} SET point = ? WHERE id=?`,
+      [point, id]
+    );
+    return result;
+  }
+
+  async updateSubscriptionById({ id, is_subscription: isSubscription }) {
+    const [result] = await this.database.query(
+      `UPDATE ${this.table} SET is_subscription = ? WHERE id=?`,
+      [isSubscription, id]
+    );
+    return result;
+  }
+
+  async create({
+    name,
+    email,
+    address,
+    phone_number: phoneNumber,
+    hashed_password: hashedPassword,
+  }) {
+    const [result] = await this.database.query(
+      `INSERT INTO ${this.table}(
+        name,
+        email,
+        address,
+        phone_number,
+        hashed_password) VALUES (?, ?, ?, ?, ?)`,
+      [name, email, address, phoneNumber, hashedPassword]
+    );
+    return result;
+  }
+  /*
   async create(user) {
-    console.log("Creating", user);
     const [result] = await this.database.query(
       `INSERT INTO ${this.table} (name, email, hashed_password) values (?, ?, ?)`,
       [
@@ -36,8 +78,7 @@ class SalonManager extends AbstractManager {
     );
     return result[0];
   }
-
-
+*/
 }
 
 module.exports = SalonManager;
