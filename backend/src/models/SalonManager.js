@@ -5,12 +5,17 @@ class SalonManager extends AbstractManager {
     super({ table: "Salon" });
   }
 
-
   async create(salon) {
     console.info("Creating", salon);
     const [result] = await this.database.query(
-      `INSERT INTO ${this.table} (name, email, password) values (?, ?, ?)`,
-      [salon.name, salon.email, salon.password]
+      `INSERT INTO ${this.table} (name, email, password, address, phone_number) values (?, ?, ?, ?, ?)`,
+      [
+        salon.name,
+        salon.email,
+        salon.password,
+        salon.address,
+        salon.phoneNumber,
+      ]
     );
     return result;
   }
