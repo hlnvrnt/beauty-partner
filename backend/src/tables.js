@@ -4,11 +4,9 @@
 
 // Import the manager modules responsible for handling data operations on the tables
 const SalonManager = require("./models/SalonManager");
+const EventManager = require("./models/EventManager");
 
-
-const managers = [
-  SalonManager,
-];
+const managers = [SalonManager, EventManager];
 
 // Create an empty object to hold data managers for different tables
 const tables = {};
