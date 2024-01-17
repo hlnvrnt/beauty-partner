@@ -27,7 +27,14 @@ export default function Offre() {
         <div className="offre">
           {offre.map((offres, index) => (
             <div className="offre-1">
-              <div className={`rond card-${index}`}>{offres.name}</div>
+              <div className="name">
+                <div className={`rond card-${index}`}>{offres.name}</div>
+              </div>
+              <div className="points-offre">
+                <h2>{offres.value} pts</h2>
+                <h3>{offres.surname}</h3>
+                <p>Découvrez-ici</p>
+              </div>
             </div>
           ))}
         </div>
