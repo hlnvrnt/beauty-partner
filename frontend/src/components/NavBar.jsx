@@ -20,7 +20,7 @@ function NavBar() {
       </div>
       <div className="pages">
         <NavLink to="/">
-          <p>NOUVEAUTES</p>
+          <p>ACCUEIL</p>
         </NavLink>
         <NavLink to="/offres">
           <p>NOS OFFRES</p>
