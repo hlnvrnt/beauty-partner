@@ -8,10 +8,10 @@ function Register() {
 
   const [newSalon, setNewSalon] = useState({
     name: "",
-    address: "",
     email: "",
-    phone_number: "",
     password: "",
+    address: "",
+    phone_number: "",
   });
   const [submittedUser, setSubmittedUser] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
@@ -23,7 +23,7 @@ function Register() {
 
     setErrorMessage("");
 
-    if (!newSalon.name || !newSalon.email || !newSalon.password) {
+    if (!newSalon.name || !newSalon.email || !newSalon.password || !newSalon.address || !newSalon.phone_number) {
       setErrorMessage("Veuillez remplir tous les champs");
     }
 
@@ -31,22 +31,17 @@ function Register() {
       setErrorMessage("Veuillez fournir une adresse e-mail valide");
     } else {
       try {
-        await axios.post("http://localhost:3310/api/salon", newSalon);
-        const res2 = await axios.post("http://localhost:3310/api/login", {
-          // on INSERT dans la DB avec les infos saisies
-          inputEmail: newSalon.email,
-          inputPassword: newSalon.password,
-        });
-        setUserInfos(res2.data);
+        const res = await axios.post("http://localhost:3310/api/salon", newSalon);
+        setUserInfos(res.data);
         setSubmittedUser([...submittedUser, newSalon]);
-        setNewSalon({ name: "", email: "", password: "" });
+        setNewSalon({ name: "", email: "", password: "", address: "", phone_number: ""});
         setSuccessMessage(
-          `Félicitations ${res2.data.pseudo}, votre compte a bien été créé !`
+          `Félicitations ${res.data.name}, votre compte a bien été créé !`
         );
       } catch (err) {
         console.error(err);
         setErrorMessage("Cet utilisateur existe déjà.");
-        setNewSalon({ name: "", email: "", password: "" });
+        setNewSalon({ name: "", email: "", password: "", address: "", phone_number: "" });
       }
     }
   };
@@ -69,7 +64,7 @@ function Register() {
             <p>
               Déjà membre partenaire ?<em> Connectez-vous</em>
             </p>
-            <form>
+            <form onSubmit={handleSubmit}>
             <div className="fields">
                 <label htmlFor="name">Nom du salon</label>
                 <input
@@ -88,9 +83,9 @@ function Register() {
                   type="adresse"
                   name=""
                   id="adresse"
-                  value={newSalon.adresse}
+                  value={newSalon.address}
                   onChange={(e) =>
-                    setNewSalon({ ...newSalon, adresse: e.target.value })
+                    setNewSalon({ ...newSalon, address: e.target.value })
                   }
                 />
               </div>
@@ -126,7 +121,7 @@ function Register() {
                   id="password"
                   value={newSalon.password}
                   onChange={(e) =>
-                    setNewSalon({ ...newSalon, phassword: e.target.value })
+                    setNewSalon({ ...newSalon, password: e.target.value })
                   }
                 />
               </div>
