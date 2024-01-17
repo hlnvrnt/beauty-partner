@@ -2,14 +2,17 @@
 
 @import "pages/_innovationai";
 
-
 // ------------ import du styles des pages ------------ //
 @import "pages/register";
 @import "pages/engagements";
 @import "_home";
 @import "login";
+@import "pages/borne";
 
 // ------------ import du styles des composants ------------ //
 @import "offre";
+
+
 @import "components/navbar";
+
 
