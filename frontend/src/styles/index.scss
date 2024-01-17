@@ -1,6 +1,15 @@
 @import "settings";
+
+@import "pages/_innovationai";
+
+
 // ------------ import du styles des pages ------------ //
-@import "components/navbar";
-// ------------ import du styles des composants ------------ //
 @import "pages/register";
 @import "pages/engagements";
+@import "_home";
+@import "login";
+
+// ------------ import du styles des composants ------------ //
+@import "offre";
+@import "components/navbar";
+

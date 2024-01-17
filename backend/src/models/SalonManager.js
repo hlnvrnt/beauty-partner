@@ -5,11 +5,36 @@ class SalonManager extends AbstractManager {
     super({ table: "Salon" });
   }
 
+
   async create(salon) {
     console.info("Creating", salon);
     const [result] = await this.database.query(
       `INSERT INTO ${this.table} (name, email, password) values (?, ?, ?)`,
       [salon.name, salon.email, salon.password]
+    );
+    return result;
+  }
+
+  async read(id) {
+    const [result] = await this.database.query(
+      `SELECT * FROM ${this.table} WHERE id=?`,
+      [id]
+    );
+    return result;
+  }
+
+  async updatePointById({ id, point }) {
+    const [result] = await this.database.query(
+      `UPDATE ${this.table} SET point = ? WHERE id=?`,
+      [point, id]
+    );
+    return result;
+  }
+
+  async updateSubscriptionById({ id, is_subscription: isSubscription }) {
+    const [result] = await this.database.query(
+      `UPDATE ${this.table} SET is_subscription = ? WHERE id=?`,
+      [isSubscription, id]
     );
     return result;
   }
