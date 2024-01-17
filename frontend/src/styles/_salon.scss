@@ -1,26 +1,169 @@
 .salon-container{
     display: flex;
+    justify-content: space-between;
     .image-container{
         width: 45vw;
         height: 100%;
 
         img{
-            height: 80vh;
+            height: 85vh;
             width: 100%;
             object-fit: cover;
         }
     }
 
     .salon-rightside{
+        width: 55vw;
         display: flex;
         flex-direction: column;
-    }
+        padding: 5% 5%;
 
-    .image-fidelite{
-        height: 80px;
+            .header{
+                background-color: bisque;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
 
-        img{
-            height: 100%;
+            .header-text{
+                text-align: center;
+
+            }
+            
+            .mon-compte{
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .nom-salon{
+                display: flex;
+                text-align: center;
+                justify-self: center;
+            }
+        }
+        .status-container{
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // background-color: beige;
+           
+
+            .status-title{
+                font-size: 1.2rem;
+                font-weight: 500;
+                padding-bottom: 10px;
+            }
+
+                
+                .progressbar{
+                    width: 100%;
+                    position:relative;
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    // background-color: beige;
+                }
+
+                .progressbar li{
+                    position: relative;
+                    list-style-type: none;
+                    text-align: center;
+                    text-transform: uppercase;
+                    width: 16%;
+                    color: #999999;
+                    font-size: 0.9rem;
+                }
+
+                .progressbar li:before {
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    margin: 7px auto 20px auto;
+                    content: '';
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: grey;
+                }
+
+                .progressbar li:after {
+                    position: absolute;
+                    z-index: -1;
+                    top: 15px;
+                    left: -50%;
+                    width: 100%;
+                    height: 2px;
+                    content: '';
+                    background-color: grey;
+                }
+
+                .progressbar li:first-child:after {
+                    content: none;
+                }
+                .progressbar li.active,
+                .progressbar li.complete{
+                    color: black;
+                }
+
+                .progressbar li.active:before,
+                .progressbar li.complete:before {
+                    background-color: #0070BD;
+                }
+
+                .progressbar li.active:before{
+                    width: 22px;
+                    height: 22px;
+                    background-color: #3AE2D8;
+                }
+                .progressbar li.active:after,
+                .progressbar li.complete:after {
+                    background-color: grey;
+                }
+                
+                ul{
+                  margin: 40px 0 !important;
+                }
+                body{
+                  margin: 40px 20px;
+                }
+                
+            }
+
+        .salon-right-bottom{
+            display: flex;
+            justify-content: center;
+        }
+        .next-status{
+            width: 84%;
+            height: 25vh;
+            background-color: #4D4083; // 
+            display: flex;
+            justify-content: space-between;
+
+            .next-status-left{
+                color: white;
+
+                img{
+                    width: 200px;
+                }
+
+                .button{
+                    color: white;
+                }
+            }
+            .image-fidelite{
+                width: 25vw;
+                height: 100%;
+        
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     }
+
+    
 }

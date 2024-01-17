@@ -8,30 +8,45 @@ function Salon() {
       </div>
       <div className="salon-rightside">
         <div>
-          <p>MON COMPTE FIDÈLITÈ</p>
-          <p>NOM DU SALON</p>
-          <p>MEMBRE PRIVILÈGE</p>
+          <div className="header">
+            <div className="header-text">
+              <p className="mon-compte">MON COMPTE FIDÉLITÉ</p>
+              <p>NOM DU SALON</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <div> </div>
-          <div> </div>
-          <div> </div>
-          <div> </div>
-          <div> </div>
-          <div> </div>
-          <p>20 000 points atteints</p>
+        <div className="status-container">
+          <p className="status-title">MEMBRE PRIVILÈGE</p>
           <p>Bénéficiez de votre avantage fidélité ! </p>
+
+          <ul className="progressbar">
+            <li className="complete" />
+            <li className="complete" />
+            <li className="complete" />
+            <li className="active">20 000 points atteints</li>
+            <li />
+            <li />
+          </ul>
         </div>
 
-        <div>
-          <div>
-            <p>Prochain statut </p>
-            <p>MEMBRE ELITE</p>
-            <img
-              src="/images/logo-beauty-partner.jpg"
-              alt="logo-beauty-partner"
-            />
-            <NavLink>Dècouvrir ici</NavLink>
+        <div className="salon-right-bottom">
+          <div className="next-status">
+            <div className="next-status-left">
+              <div>
+                <p>Prochain statut </p>
+              </div>
+              <div>
+                <p>MEMBRE ELITE</p>
+                <div>
+                  <img
+                    src="/images/logo-beauty-partner.jpg"
+                    alt="logo-beauty-partner"
+                  />
+                </div>
+              </div>
+              <NavLink className="button">Dècouvrir ici</NavLink>
+            </div>
+
             <div className="image-fidelite">
               <img src="/images/image_member_elite.png" alt="member-elite" />
             </div>
