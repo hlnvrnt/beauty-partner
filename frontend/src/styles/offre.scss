@@ -1,0 +1,27 @@
+.container-page-offre{
+    .nouveaute-offre
+    {
+        h1{
+
+        }
+        .offre-nouveaute1{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap : 200px;
+
+            .rond1{
+                width: 200px;
+                height: 200px;
+                border: 1px solid red;
+                border-radius: 50%;
+            }
+            .rond2{
+                width: 200px;
+                height: 200px;
+                border: 1px solid red;
+                border-radius: 50%;
+            }
+        }
+    }
+}
