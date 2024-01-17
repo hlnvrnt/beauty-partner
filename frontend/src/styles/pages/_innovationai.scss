@@ -1,25 +1,61 @@
 .innovation-container {
-  border: 1px solid green;
-
   display: flex;
   flex-direction: row-reverse;
-  width: 100vw;
-  height: 100vw;
 
   .img-container {
-    border: 3px solid yellow;
-
     img {
       width: 50vw;
-      height: 30vw;
+      height: 40vw;
     }
   }
 
   .content-wrapper {
-    height: 20vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid blue;
+    align-items: center;
+    justify-content: space-around;
+
+    .header-wrapper {
+      border-bottom: 2px solid rgb(0, 0, 0);
+      width: 100%;
+
+      h1 {
+        padding-top: 8%;
+        text-align: center;
+        font-size: 35px;
+      }
+    }
+    p {
+      width: 90%;
+      text-align: justify;
+    }
+
+    .footer-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      img {
+        width: 15vw;
+      }
+    }
+
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--tertiary-color);
+      transition: transform 0.3s ease;
+    }
+    a:hover {
+      color: var(--secondary-color);
+      transform: scale(1.1);
+    }
   }
 }

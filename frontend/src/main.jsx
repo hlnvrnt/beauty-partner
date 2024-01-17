@@ -9,6 +9,7 @@ import Partenaires from "./pages/Partenaires";
 import InnovationAI from "./pages/InnovationAI";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Borne from "./pages/Borne";
 
 import "./styles/index.scss";
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/borne",
+        element: <Borne />,
       },
     ],
   },
