@@ -54,7 +54,7 @@ INSERT INTO Event (name,surname, description, program, image, value)
 VALUES 
 (
     'INITIAL',
-    'COFFRET - CADEEAU & PROMOTION',
+    'COFFRET - CADEAU & PROMOTION',
     'Plongez dans l/univers de la beauté ultime avec nos coffrets cadeaux L/Oréal, une célébration de l/élégance intemporelle et de l/innovation contemporaine. Chaque coffret est une invitation à l/expérience sensorielle, capturant l/essence même du raffinement et de la confiance en soi.',
     '✨ Une Sélection Exquise : Nos coffrets regorgent des produits les plus emblématiques de L/Oréal, soigneusement sélectionnés pour offrir une expérience complète de beauté. Des formules luxueuses aux couleurs éblouissantes, chaque produit incarne l/excellence et l/attention portée aux détails.
 
@@ -80,7 +80,7 @@ VALUES
 ),
 (
     'PRESTIGE',
-    'DECOOUVERTE LABORATOIRE',
+    'DECOUVERTE LABORATOIRE',
     'Bienvenue à la "Découverte des Coulisses de l/Innovation L/Oréal", une opportunité exclusive de plonger dans l/univers fascinant de la recherche et de l/innovation dans le domaine de la beauté. Nous sommes ravis de vous convier à une visite immersive de l/un de nos prestigieux Centres de Recherche et d/Innovation, où la science et la créativité se rencontrent pour façonner l/avenir de la beauté.', 
     '🔍 Exploration des Laboratoires : Participez à une expérience immersive en explorant nos laboratoires de pointe. Découvrez les technologies de pointe utilisées dans le développement de nos produits révolutionnaires et apprenez comment la recherche L/Oréal redéfinit les normes de l/industrie.
 
