@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-
 }
 
 html,
@@ -13,7 +12,6 @@ body,
 :root {
   min-height: 100vh;
   overflow-x: hidden;
-
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -37,5 +35,4 @@ background-color: var(--secondary-color);
   --sixth-color: #0053BB;
   --title-font-size: 30px;
   --text-second-font-size: 18px;
-  --font-family: "poppins";
 }

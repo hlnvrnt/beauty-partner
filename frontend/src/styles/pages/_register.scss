@@ -1,0 +1,99 @@
+.login {
+    height: 80vh;
+    display: flex;
+  
+    .login-img-container {
+      height: 100%;
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .login-connexion-container {
+      width: 75%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .login-content-connexion-background {
+      width: 33%;
+      height: 85%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #62A8FF, #28F1E5);
+    }
+  
+    .login-content-connexion {
+      width: calc(100% - 5px);
+      height: calc(100% - 5px);
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border-radius: 2px;
+      padding: 6%;
+    }
+  
+    .under-title {
+  background: linear-gradient(to right, #6151A5, #3AE2D8 65%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+    
+    em {
+      color: #6151a5; 
+      font-style: normal;
+    }
+  
+    form {
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    .fields {
+      height: 30%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    label {
+      font-weight: 600;
+      width: 90%;
+    }
+  
+    input {
+      width: 90%;
+      border-top-style: none;
+      border-left-style: none;
+      border-right-style: none;
+    }
+  
+    button {
+      height: 12%;
+      width: 85%;
+      background-color: #6151a5;
+      color: white;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+  }
