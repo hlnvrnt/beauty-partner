@@ -4,23 +4,52 @@
         h1{
 
         }
-        .offre-nouveaute1{
-            width: 100%;
+    }
+    .container-offre{
+        .offre{
+            border: 1px solid red;
             display: flex;
-            justify-content: center;
-            gap : 200px;
-
-            .rond1{
-                width: 200px;
-                height: 200px;
-                border: 1px solid red;
+            flex-wrap: wrap;
+            row-gap: 80px;
+            padding-top: 80px;
+            .offre-1{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                
+                
+                
+                .rond{
+                    
+                    width: 200px;
+                    height: 200px;
                 border-radius: 50%;
-            }
-            .rond2{
-                width: 200px;
-                height: 200px;
-                border: 1px solid red;
-                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                }
+.rond.card-0{
+    border: 5px solid #62A8FF;
+}
+.rond.card-1{
+    border: 5px solid #3AE2D8;
+}
+.rond.card-2{
+    border: 5px solid #0053BB;
+}
+.rond.card-3{
+    background-color: #4D4083;
+    color: white;
+}
+.rond.card-4{
+    background-color: #508FBB;
+    color: white;
+}
+.rond.card-5{
+    background-color: #44546A;
+    color: white;
+}
             }
         }
     }
