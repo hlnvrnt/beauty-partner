@@ -5,7 +5,6 @@ import App from "./App";
 import Home from "./pages/Home";
 import "./styles/index.scss";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,8 +16,11 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/home",
+    element: <Home />,
+  },
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
