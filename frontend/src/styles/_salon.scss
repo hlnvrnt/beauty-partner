@@ -1,0 +1,26 @@
+.salon-container{
+    display: flex;
+    .image-container{
+        width: 45vw;
+        height: 100%;
+
+        img{
+            height: 80vh;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .salon-rightside{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-fidelite{
+        height: 80px;
+
+        img{
+            height: 100%;
+        }
+    }
+}
