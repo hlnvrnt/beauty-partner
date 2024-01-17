@@ -3,8 +3,14 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
-import "./styles/index.scss";
+import Offres from "./pages/Offres";
+import Engagements from "./pages/Engagements";
+import Partenaires from "./pages/Partenaires";
+import InnovationAI from "./pages/InnovationAI";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
+import "./styles/index.scss";
 
 const router = createBrowserRouter([
   {
@@ -15,10 +21,33 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      {
+        path: "/offres",
+        element: <Offres />,
+      },
+      {
+        path: "/engagements",
+        element: <Engagements />,
+      },
+      {
+        path: "/partenaires",
+        element: <Partenaires />,
+      },
+      {
+        path: "/innovation",
+        element: <InnovationAI />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
     ],
   },
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

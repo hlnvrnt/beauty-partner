@@ -1,0 +1,48 @@
+.navbar{
+    background-color: var(--primary-color);
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    gap : 5px;
+    .first-container{
+        display : flex;
+        width: 100vw;
+        justify-content: space-around;
+        
+        .marque{
+            display:flex;
+            flex-direction: column;
+            width : 43vw;
+            align-items: flex-end;
+            margin-bottom: 10px;
+    
+            img{
+                width:8vw;
+            }
+        }
+    }
+    
+    .connexion{
+        display:flex;
+        justify-content: space-around;
+        width: 20vw;
+        align-items: center;
+        a{
+            color : var(--color-text);
+            text-decoration: none;
+        }
+    }
+
+    .pages{
+        display:flex;
+        width:80vw;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+       a{
+        color : var(--color-text);
+        text-decoration: none;
+    } 
+    }
+    
+}
