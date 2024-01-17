@@ -10,9 +10,9 @@ CREATE TABLE
         id INT PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(80) NOT NULL,
         email  VARCHAR(80) NOT NULL,
-        hashed_password VARCHAR(50) NOT NULL DEFAULT 'beauty',
+        password VARCHAR(50) NOT NULL DEFAULT 'beauty',
         address VARCHAR(250),
-        phone_number VARCHAR(80) NOT NULL,
+        phone_number VARCHAR(80),
         point INT NOT NULL DEFAULT 0,
         is_subscription BOOLEAN NOT NULL DEFAULT 0
     );
@@ -42,7 +42,7 @@ CREATE TABLE
 
 
 -- Insert into DB
-INSERT INTO Salon (name, email, hashed_password, address, phone_number, point, is_subscription)
+INSERT INTO Salon (name, email, password, address, phone_number, point, is_subscription)
 VALUES
     ('Le Charme Beauty', 'charme_beauty@mail.com', 'hashed_charme_password', '123 Rue Principale, Paris, France', '+33 1 23 45 67 89', 22000, 1),
     ('Belle Vue Salon', 'belle_vue@mail.com', 'hashed_bellevue_password', '456 Avenue des Roses, Lyon, France', '+33 4 56 78 90 12', 15000, 0),

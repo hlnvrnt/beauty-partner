@@ -2,8 +2,8 @@ const tables = require("../tables");
 
 const browse = async (req, res, next) => {
   try {
-    const users = await tables.user.readAll();
-    res.json(users);
+    const salons = await tables.Salon.readAll();
+    res.json(salons);
   } catch (err) {
     next(err);
   }
@@ -13,12 +13,12 @@ const browse = async (req, res, next) => {
 const add = async (req, res, next) => {
   try {
     const { name, email } = req.body;
-    console.log(req.body);
-    const existingUser = await tables.user.readOneUser(name, email);
-    if (existingUser) {
+    console.info(req.body);
+    const existingSalon = await tables.Salon.readOneUser(name, email);
+    if (existingSalon) {
       return res.status((400).json({ error: "Cet utilsateur existe déjà." }));
     }
-    const insertId = await tables.user.create(req.body);
+    const insertId = await tables.Salon.create(req.body);
     res.status(201).json({ insertId });
   } catch (err) {
     next(err);
