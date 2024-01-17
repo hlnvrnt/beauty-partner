@@ -5,6 +5,16 @@ class SalonManager extends AbstractManager {
     super({ table: "Salon" });
   }
 
+
+  async create(salon) {
+    console.info("Creating", salon);
+    const [result] = await this.database.query(
+      `INSERT INTO ${this.table} (name, email, password) values (?, ?, ?)`,
+      [salon.name, salon.email, salon.password]
+    );
+    return result;
+  }
+
   async read(id) {
     const [result] = await this.database.query(
       `SELECT * FROM ${this.table} WHERE id=?`,
@@ -29,39 +39,6 @@ class SalonManager extends AbstractManager {
     return result;
   }
 
-  async create({
-    name,
-    email,
-    address,
-    phone_number: phoneNumber,
-    hashed_password: hashedPassword,
-  }) {
-    const [result] = await this.database.query(
-      `INSERT INTO ${this.table}(
-        name,
-        email,
-        address,
-        phone_number,
-        hashed_password) VALUES (?, ?, ?, ?, ?)`,
-      [name, email, address, phoneNumber, hashedPassword]
-    );
-    return result;
-  }
-  /*
-  async create(user) {
-    const [result] = await this.database.query(
-      `INSERT INTO ${this.table} (name, email, hashed_password) values (?, ?, ?)`,
-      [
-        user.name,
-        user.email,
-        user.hashedPassword,
-      ]
-    );
-    return result;
-  }
-
- 
-
   // on cherche le user par son adresse e-mail pour renvoyer toutes ses infos (pour ensuite vérifier le mdp et si ok renvoyer les infos users vers le front)
   async getByMail(email) {
     const [result] = await this.database.query(
@@ -71,14 +48,13 @@ class SalonManager extends AbstractManager {
     return result[0];
   }
 
-  async readOneUser(newUser) {
+  async readOneUser(newSalon) {
     const [result] = await this.database.query(
       `SELECT * FROM ${this.table} WHERE name = ? OR email = ? OR id=?`,
-      [newUser.name, newUser.email, newUser.id]
+      [newSalon.name, newSalon.email, newSalon.id]
     );
     return result[0];
   }
-*/
 }
 
 module.exports = SalonManager;
