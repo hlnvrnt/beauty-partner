@@ -8,10 +8,11 @@ const router = express.Router();
 
 const salonControllers = require("./controllers/salonControllers");
 const eventControllers = require("./controllers/eventControllers");
+const authControllers = require("./controllers/authControllers");
 
 
 // Import auth services for security operations
-
+router.post("/login", authControllers.login);
 
 // // Route to get a specific item by ID
 // router.get("/salon/:id", salonControllers.read);
@@ -24,7 +25,6 @@ router.get("/salon/:id", salonControllers.readById); // test OK
 router.post("/salon", salonControllers.add); // test OK
 router.put("/salon/:id", salonControllers.editPoint); // test OK
 router.put("/salon/subscription/:id", salonControllers.editSubscription);
-
 
 /* ************************************************************************* */
 // Import itemControllers module for handling item-related operations
