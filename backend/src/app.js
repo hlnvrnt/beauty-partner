@@ -39,7 +39,6 @@ app.use(express.static(path.join(__dirname, "../public/")));
 // function qui permet de rendre static le dossier mentionner. c'est à dire le rendre disponible pour tous.
 
 
-
 app.use("/images", express.static("images"));
 // ici on ajout un path au chepin static pour images
 

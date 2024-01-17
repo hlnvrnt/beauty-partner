@@ -25,6 +25,15 @@ CREATE TABLE
         description  TEXT NOT NULL,
         value INT NOT NULL
     );
+INSERT INTO Event(
+    name,
+    description,
+    value
+)
+    VALUES
+    ('Salon 1', 'salon1@example.com', 200),
+    ('Salon 1', 'salon1@example.com', 300),
+    ('Salon 1', 'salon1@example.com', 400);
 
 CREATE TABLE
     `Order` (
