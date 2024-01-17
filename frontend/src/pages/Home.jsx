@@ -1,7 +1,7 @@
 function Home() {
   return (
-    <div>
-      <div>
+    <div className="home-container">
+      <div className="image-container">
         <img src="public/images/imageHome.webp" alt="home" />
       </div>
       <div>
