@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useUser } from "../context/UserContext";
@@ -8,7 +8,9 @@ function Register() {
 
   const [newSalon, setNewSalon] = useState({
     name: "",
+    address: "",
     email: "",
+    phone_number: "",
     password: "",
   });
   const [submittedUser, setSubmittedUser] = useState([]);
@@ -53,60 +55,85 @@ function Register() {
   };
 
   return (
-    <div className="register-container">
-      <img src="/images/Rectangle 43.png" alt="register" />
-      <div className="formulaire">
-        <h1>Formulaire d'inscription</h1>
-        <h2>L'Oréal Beautypartner</h2>
-        <NavLink to="/login">
-          <p>Déjà membre partenaire ? Connectez-vous</p>
-        </NavLink>
-        {errorMessage !== "" && (
-          <div className="message">
-            <p className="error">{errorMessage}</p>
+    <div className="login">
+      <div className="login-img-container">
+        <img src="/images/login_picture.png" alt="women" />
+      </div>
+      <div className="login-connexion-container">
+        <div className="login-content-connexion-background">
+          <div className="login-content-connexion">
+            <div>
+              <h2>Formulaire d'inscription</h2>
+              <p className="under-title">L'Oréal BeautyPartner</p>
+            </div>
+            <p>
+              Déjà membre partenaire ?<em> Connectez-vous</em>
+            </p>
+            <form>
+            <div className="fields">
+                <label htmlFor="name">Nom du salon</label>
+                <input
+                  type="name"
+                  name=""
+                  id="name"
+                  value={newSalon.name}
+                  onChange={(e) =>
+                    setNewSalon({ ...newSalon, name: e.target.value })
+                  }
+                />
+              </div>
+              <div className="fields">
+                <label htmlFor="adresse">Adresse</label>
+                <input
+                  type="adresse"
+                  name=""
+                  id="adresse"
+                  value={newSalon.adresse}
+                  onChange={(e) =>
+                    setNewSalon({ ...newSalon, adresse: e.target.value })
+                  }
+                />
+              </div>
+              <div className="fields">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  value={newSalon.email}
+                  onChange={(e) =>
+                    setNewSalon({ ...newSalon, email: e.target.value })
+                  }
+                />
+              </div>
+              <div className="fields">
+                <label htmlFor="phone number">N° de téléphone</label>
+                <input
+                  type="phone number"
+                  name=""
+                  id="phone number"
+                  value={newSalon.phone_number}
+                  onChange={(e) =>
+                    setNewSalon({ ...newSalon, phone_number: e.target.value })
+                  }
+                />
+              </div>
+              <div className="fields">
+                <label htmlFor="password">Mot de passe</label>
+                <input
+                  type="password"
+                  name=""
+                  id="password"
+                  value={newSalon.password}
+                  onChange={(e) =>
+                    setNewSalon({ ...newSalon, phassword: e.target.value })
+                  }
+                />
+              </div>
+              <button type="submit">S'incrire</button>
+            </form>
           </div>
-        )}
-        {successMessage !== "" && (
-          <div className="message">
-            <p className="error">{successMessage}</p>
-          </div>
-        )}
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="nom du salon"
-            placeholder="Nom du salon"
-            value={newSalon.name}
-            onChange={(e) => setNewSalon({ ...newSalon, name: e.target.value })}
-          />
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            value={newSalon.email}
-            onChange={(e) =>
-              setNewSalon({ ...newSalon, email: e.target.value })
-            }
-          />
-          <div className="button-password">
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              placeholder="Mot de passe"
-              value={newSalon.password}
-              onChange={(e) =>
-                setNewSalon({ ...newSalon, password: e.target.value })
-              }
-            />
-            <button type="button" onClick={PasswordVisibility}>
-              {showPassword ? "Masquer" : "Afficher"}
-            </button>
-          </div>
-
-          <div className="signin-button">
-            <button type="submit">INSCRIPTION</button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   );
