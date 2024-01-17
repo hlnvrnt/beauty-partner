@@ -1,0 +1,25 @@
+.innovation-container {
+  border: 1px solid green;
+
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+  height: 100vw;
+
+  .img-container {
+    border: 3px solid yellow;
+
+    img {
+      width: 50vw;
+      height: 30vw;
+    }
+  }
+
+  .content-wrapper {
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid blue;
+  }
+}
