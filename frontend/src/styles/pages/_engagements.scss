@@ -1,0 +1,14 @@
+.engagement-container{
+    display : flex;
+    gap:50px;
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    img{
+        // object-fit: cover;
+        height:60vh;
+    }
+}

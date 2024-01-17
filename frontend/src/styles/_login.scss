@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #62A8FF, #28F1E5);
+    background: linear-gradient(to right, #62a8ff, #28f1e5);
   }
 
   .login-content-connexion {
@@ -43,16 +43,21 @@
     padding: 6%;
   }
 
+  h2 {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
   .under-title {
-background: linear-gradient(to right, #6151A5, #3AE2D8 65%);
+    background: linear-gradient(to right, #6151a5, #3ae2d8 65%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
+
   em {
-    color: #6151a5; 
+    color: #6151a5;
     font-style: normal;
   }
 
@@ -95,5 +100,9 @@ background: linear-gradient(to right, #6151A5, #3AE2D8 65%);
     border: none;
     border-radius: 2px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  button:hover {
+    transform: scale(1.04);
   }
 }
