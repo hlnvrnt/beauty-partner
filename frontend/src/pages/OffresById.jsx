@@ -8,7 +8,7 @@ export const offrebyid = async ({ params }) => {
       `${import.meta.env.VITE_BACKEND_URL}/api/events/${params.id}`
     );
 
-    return offreId.data;
+    return offreId.data[0];
   } catch (e) {
     console.error(e);
     return [];
@@ -19,17 +19,15 @@ function OffresById() {
   const offre = useLoaderData(offrebyid);
 
   return (
-    <div>
+    <div className="container-offrebyid">
       <div>
         <h1>Offres</h1>
         <div>
-          {offre.map((offres) => (
-            <div>
-              <div>{offres.name}</div>
-              <div>{offres.value}</div>
-              <div>{offres.surname}</div>
-            </div>
-          ))}
+          <div className="flex-rond">
+            <div className={`rond card-${offre.id - 1}`}>{offre.name}</div>
+            <div className="">{offre.value} pts</div>
+            <div>{offre.surname}</div>
+          </div>
         </div>
       </div>
     </div>

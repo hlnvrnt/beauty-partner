@@ -1,0 +1,18 @@
+.container-offrebyid {
+  border: 1px solid red;
+  width: 100%;
+
+  .flex-rond {
+    .rond {
+      border: 1px solid red;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card-0{
+        background-color: red;
+    }  }
+}

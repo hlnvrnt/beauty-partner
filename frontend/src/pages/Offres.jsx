@@ -44,7 +44,7 @@ export default function Offre() {
               <div className="points-offre">
                 <h2>{offres.value} pts</h2>
                 <h3>{offres.surname}</h3>
-                <Link to={"/OffresById/" + offres.id}>
+                <Link to={`/OffresById/${offres.id}`}>
                   <p>Découvrez-ici</p>
                 </Link>
               </div>
