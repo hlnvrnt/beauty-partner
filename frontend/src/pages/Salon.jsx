@@ -48,7 +48,7 @@ function Salon() {
           <div className="next-status">
             <div className="next-status-left">
               <div className="text-next-status">
-                <p>Prochain statut </p>
+                <p>NOUVEAUTÉ</p>
               </div>
               <div className="text-image-next-status">
                 <p>MEMBRE ELITE</p>
@@ -60,7 +60,7 @@ function Salon() {
                 </div>
               </div>
               <div className="button-container">
-                <Link to={`/OffresById/4`} className="button-salon">
+                <Link to="/innovation" className="button-salon">
                   Découvrir ici
                 </Link>
               </div>
