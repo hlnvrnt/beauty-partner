@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Modale from "../components/Modale";
 
 export const offrebyid = async ({ params }) => {
@@ -29,7 +29,9 @@ function OffresById() {
   return (
     <div className="container-offrebyid">
       <div>
-        <h1>Offres</h1>
+        <Link to="/offres">
+          <p>RETOUR</p>
+        </Link>
         <div>
           <div className="flex-rond">
             <div className="title">
@@ -37,18 +39,13 @@ function OffresById() {
                 <h1>{offre.name}</h1>
                 <p>{offre.surname}</p>
               </div>
-              <div className="button-loreal">
-                <button className="button" type="button" onClick={handleModale}>
-                  Commander l'offre
-                </button>
-              </div>
-              {showModale && (
-                <Modale isOpen={showModale} setShowModale={setShowModale} />
-              )}
+          
             </div>
+            <div className="trait" />
             <div className="img-description">
               <div className="img-offre">
                 <img
+                  className="border-img"
                   src={`${import.meta.env.VITE_BACKEND_URL}${offre.image}`}
                 />
               </div>
@@ -60,6 +57,18 @@ function OffresById() {
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
+                <div className="button-loreal">
+                  <button
+                    className="button"
+                    type="button"
+                    onClick={handleModale}
+                  >
+                    Commander l'offre
+                  </button>
+                </div>
+                {showModale && (
+                  <Modale isOpen={showModale} setShowModale={setShowModale} />
+                )}
               </div>
             </div>
           </div>

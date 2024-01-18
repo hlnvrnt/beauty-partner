@@ -48,7 +48,7 @@ function NavBar() {
           <p>NOS MARQUES</p>
         </NavLink>
         <NavLink to="/innovation">
-          <p>INNOVATION AI</p>
+          <p className="b">INNOVATION AI</p>
         </NavLink>
       </div>
     </div>

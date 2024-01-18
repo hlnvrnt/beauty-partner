@@ -60,7 +60,7 @@ VALUES
     🌺 Soins Exceptionnels :\n Offrez vous une pause bien-être avec nos produits de soins innovants. Des rituels hydratants aux formules régénérantes, nos coffrets sont conçus pour sublimer la peau et raviver l\'éclat naturel.
 
     💄 Élégance Personnalisée :\n Chaque coffret est une œuvre d\'art en soi, orné d\'un design sophistiqué qui séduit dès le premier regard. Choisissez parmi une gamme variée de thèmes pour personnaliser votre cadeau et le rendre encore plus mémorable.',
-    '/images/coffret-cadeaux.jpg', 
+    '/images/img-6.png', 
     10000
 ),
 (

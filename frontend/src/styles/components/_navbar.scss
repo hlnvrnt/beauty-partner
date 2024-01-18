@@ -63,7 +63,7 @@ width: 100vw;
       color: var(--color-text);
       text-decoration: none;
       transition: transform 0.3s ease;
-      font-size:12px;
+      font-size:15px;
     }
     a:hover {
       color: var(--secondary-color);
@@ -90,7 +90,8 @@ width: 100vw;
         overflow: hidden;
         justify-content: center;
         
-
+        
+    
     a {
       color: var(--color-text);
       text-decoration: none;
@@ -99,14 +100,14 @@ width: 100vw;
     position: relative;
     padding : 0px 50px 0px 50px;
 
-
     }
     p{
       width: 100%;
+
     }
+   
     p:hover {
       color: var(--secondary-color);
-      transform: scale(1.1);
       transition: 0.5s;
     }
     a:after{
@@ -116,6 +117,17 @@ width: 100vw;
       left: 0px;
       border-right: 1px solid white;
       height: 100%;
+      
+    }
+
+    .b:after{
+      content: "";
+      position: absolute;
+      top : 0px;
+      right: 0px;
+      border-right: 1px solid white;
+      height: 100%;
+      
     }
 
   }
