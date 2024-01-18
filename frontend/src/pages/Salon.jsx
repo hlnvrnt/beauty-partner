@@ -32,10 +32,10 @@ function Salon() {
         <div className="salon-right-bottom">
           <div className="next-status">
             <div className="next-status-left">
-              <div>
+              <div className="text-next-status">
                 <p>Prochain statut </p>
               </div>
-              <div>
+              <div className="text-image-next-status">
                 <p>MEMBRE ELITE</p>
                 <div>
                   <img
@@ -44,7 +44,9 @@ function Salon() {
                   />
                 </div>
               </div>
-              <NavLink className="button">Dècouvrir ici</NavLink>
+              <div className="button-container">
+                <NavLink className="button">Dècouvrir ici</NavLink>
+              </div>
             </div>
 
             <div className="image-fidelite">

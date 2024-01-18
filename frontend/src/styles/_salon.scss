@@ -3,7 +3,7 @@
     justify-content: space-between;
     .image-container{
         width: 45vw;
-        height: 100%;
+        // height: 100%;
 
         img{
             height: 85vh;
@@ -16,13 +16,13 @@
         width: 55vw;
         display: flex;
         flex-direction: column;
-        padding: 5% 5%;
+        padding: 3% 5% 0 5%;
 
             .header{
-                background-color: bisque;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
+                padding-bottom: 40px;
 
             .header-text{
                 text-align: center;
@@ -41,7 +41,7 @@
             }
         }
         .status-container{
-            padding: 40px 0;
+            padding: 30px 0 40px 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -139,21 +139,39 @@
             height: 25vh;
             background-color: #4D4083; // 
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
 
             .next-status-left{
                 color: white;
+                width: 35%;
 
                 img{
-                    width: 200px;
+                    width: 100%;
                 }
 
                 .button{
                     color: white;
+                    text-decoration: none;
+                    background-color: black;
+                    padding: 2% 12%;
+                }
+
+                .button-container{
+                    text-align: center;
+                }
+
+                .text-next-status{
+                    padding: 5% 0;
+                    text-align: center;
+                }
+
+                .text-image-next-status{
+                    padding: 10% 0 10% 0;
+                    text-align: center;
                 }
             }
             .image-fidelite{
-                width: 25vw;
+                width: 65%;
                 height: 100%;
         
                 img{
