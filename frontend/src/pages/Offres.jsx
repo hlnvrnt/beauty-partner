@@ -27,6 +27,7 @@ export default function Offre() {
         exceptionnelles sur nos produits de pointe, des avant-premières sur les
         dernières tendances et des cadeaux spéciaux réservés aux membres.
       </p>
+
       <div className="nouveaute-offre">
         <h1>NOUVEAUTÉS</h1>
         <div className="rond-nouveauté">
