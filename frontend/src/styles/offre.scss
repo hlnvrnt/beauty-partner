@@ -84,10 +84,13 @@ color: #508FBB;
         font-size: 20px;
     }
     p{
-        color: black;
+        color: #48d3ca;
         text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
 
     }
+
 }
             }
         }
@@ -116,12 +119,18 @@ color: #508FBB;
           width: 35%;
         }
         .points-offre {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            line-height: 40px;
           h2 {
             font-size: 40px;
           }
           h3 {
             font-size: 20px;
           }
+
         }
       }
     }
