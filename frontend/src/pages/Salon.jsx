@@ -61,7 +61,7 @@ function Salon() {
               </div>
               <div className="button-container">
                 <Link to={`/OffresById/4`} className="button-salon">
-                  Dècouvrir ici
+                  Découvrir ici
                 </Link>
               </div>
             </div>
