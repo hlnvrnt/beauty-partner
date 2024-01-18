@@ -26,6 +26,14 @@
       height: 1px;
       background-color: black;
     }
+
+
+    .title{
+      display:flex;
+
+
+    }
+    
     .rond {
       flex-direction: column;
       width: 200px;
@@ -81,7 +89,6 @@
     .img-description {
       display: flex;
       justify-content: center;
-
       padding-top: 50px;
       gap: 80px;
       margin: 0 auto;
@@ -96,19 +103,82 @@
         .border-img {
           width: 492px;
       border: 1px solid black;
+        display: flex;
+       
+        img {
+          width: 500px;
+          object-fit: cover;
+        }
+      }
+      .desc-pro{
+        padding: 0 5vw 0 5vw;
+        .description {
+          width: 100%;
+          font-size: 1.2rem;
+          font-weight: bold;
+ 
+
+        }
+        .programe{
+          margin-top: 5px;
+          p{
+            margin-bottom: 10px;
+            font-size: 1rem;
+          }
+        }
+
+      }
+
     
 
       }}
 
       .desc-pro {
         width: 50%;
-
-        h1 {
-          font-size: 25px;
-          font-weight: 100;
-          border: 1px solid black;
-          padding: 5px;
-          text-align: center;
+        .button-loreal {
+          display: flex;
+          justify-content: center;
+          align-items: end;
+          position: relative;
+          padding-bottom: 3%;
+          .button {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            width: 15vw;
+            padding: 10px;
+            background-color: #24aaa1;
+            border-radius: 50px;
+            font-weight: 500;
+            border: 3px solid #ffffff4d;
+            overflow: hidden;
+            font-size: 20px;
+            cursor: pointer;
+            color:white;
+          }
+        }
+        .button:hover {
+          transform: scale(1.05);
+          border-color: #fff9;
+        }
+        
+        .button:hover::before {
+          animation: shine 1.5s ease-out infinite;
+        }
+        
+        .button::before {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 100%;
+          background-image: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%
+          );
+          top: 0;
+          left: -100px;
+          opacity: 0.6;
         }
         .description {
           text-transform: uppercase;
@@ -126,4 +196,4 @@
       }
     }
   }
-}
+

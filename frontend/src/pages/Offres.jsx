@@ -11,7 +11,6 @@ export default function Offre() {
       .get(`${import.meta.env.VITE_BACKEND_URL}/api/events`)
       .then((res) => {
         setOffre(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.error(err);
@@ -20,6 +19,14 @@ export default function Offre() {
 
   return (
     <div className="container-page-offre">
+      <p className="offres-presentation">
+        Accédez à des offres exclusives et personnalisées, soigneusement
+        sélectionnées pour stimuler la croissance de votre salon et améliorer
+        votre expérience et celle de vos clients.
+        <br /> Profitez de remises exceptionnelles sur nos produits de pointe,
+        des avant-premières sur les dernières tendances et des cadeaux spéciaux
+        réservés aux membres.
+      </p>
       <div className="nouveaute-offre">
         <h1>NOUVEAUTÉS</h1>
         <div className="rond-nouveauté">

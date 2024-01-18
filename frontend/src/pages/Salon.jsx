@@ -12,7 +12,7 @@ function Salon() {
   return (
     <div className="salon-container">
       <div className="image-container">
-        <img src="public/images/image_salon.png" alt="salon" />
+        <img src="images/image_salon.jpg" alt="salon" />
       </div>
       <div className="salon-rightside">
         <div>
@@ -48,7 +48,7 @@ function Salon() {
           <div className="next-status">
             <div className="next-status-left">
               <div className="text-next-status">
-                <p>Prochain statut </p>
+                <p>NOUVEAUTÉ</p>
               </div>
               <div className="text-image-next-status">
                 <p>MEMBRE ELITE</p>
@@ -60,14 +60,14 @@ function Salon() {
                 </div>
               </div>
               <div className="button-container">
-                <Link to={`/OffresById/4`} className="button-salon">
+                <Link to="/innovation" className="button-salon">
                   Découvrir ici
                 </Link>
               </div>
             </div>
 
             <div className="image-fidelite">
-              <img src="/images/image_member_elite.png" alt="member-elite" />
+              <img src="/images/image_member_elite.jpg" alt="member-elite" />
             </div>
           </div>
         </div>
