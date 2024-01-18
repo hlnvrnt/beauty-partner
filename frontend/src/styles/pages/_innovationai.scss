@@ -64,10 +64,17 @@
 
 
   .img-container {
-    img {
-      width: 50vw;
-      height: 40vw;
+    .img-fond{
+
+      height: 39.7vw;
+      overflow: hidden;
+      img {
+        width: 50vw;
+        height: 40vw;
+        
+      }
     }
+
   }
 
   .content-wrapper {
