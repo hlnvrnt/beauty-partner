@@ -38,7 +38,7 @@ function Salon() {
             <li className="complete" />
             <li className="complete" />
             <li className="complete" />
-            <li className="active">80 000 points</li>
+            <li className="active">50 000 points</li>
             <li />
             <li />
           </ul>
