@@ -23,17 +23,15 @@ function Login() {
       const res = await axios.post("http://localhost:3310/api/login", {
         inputEmail: email,
         inputPassword: password,
-    });
+      });
       if (res.status === 200) {
-        navigate("/offres");
         setUserInfos(res.data);
+        navigate("/home");
       }
     } catch (e) {
       console.info(e);
     }
   };
-
-  console.log('context :',userInfos);
 
   return (
     <div className="login">
