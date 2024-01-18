@@ -1,6 +1,14 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import Modale from "../components/Modale";
 
 function InnovationAI() {
+  const [showModale, setShowModale] = useState(false);
+
+  const handleModale = () => {
+    setShowModale(true);
+  };
+
   return (
     <div className="innovation-container">
       <div className="img-container">
@@ -34,10 +42,18 @@ function InnovationAI() {
           <p>Une offre réservée au membres Elite</p>
           <img src="images/logo-beauty-partner.jpg" alt="beautypartner" />
         </div>
+        <div className="button-loreal">
+          <button className="button" type="button" onClick={handleModale}>
+            Commander la borne
+          </button>
 
-        <NavLink to="/borne">
-          <h3>Cliquez ici pour tester notre borne AI </h3>
-        </NavLink>
+          {showModale && (
+            <Modale isOpen={showModale} setShowModale={setShowModale} />
+          )}
+          <NavLink to="/borne">
+            <h3>Cliquez ici pour tester notre borne AI </h3>
+          </NavLink>
+        </div>
       </div>
     </div>
   );

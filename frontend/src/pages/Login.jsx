@@ -6,7 +6,7 @@ import { useUser } from "../context/UserContext";
 
 function Login() {
   // todo : importer le setter "setUserInfos" via Useconext
-  const { setUserInfos, userInfos } = useUser();
+  const { setUserInfos } = useUser();
   const navigate = useNavigate();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -26,13 +26,12 @@ function Login() {
       });
       if (res.status === 200) {
         setUserInfos(res.data);
-        navigate("/home");
+        navigate("/account");
       }
     } catch (e) {
       console.info(e);
     }
   };
-
   return (
     <div className="login">
       <div className="login-img-container">
