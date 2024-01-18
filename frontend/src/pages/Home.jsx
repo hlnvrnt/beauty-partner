@@ -5,14 +5,14 @@ function Home() {
   return (
     <div className="home-container">
       <div className="image-container">
-        <img src="public/images/imageHome.webp" alt="home" />
+        <img src="images/imageHome.webp" alt="home" />
       </div>
       <div className="images-logo-container">
         <div className="bp-image-container">
-          <img src="public/images/home_logo.png" alt="logo-beautypartner" />
+          <img src="images/home_logo.png" alt="logo-beautypartner" />
         </div>
         <div className="beautypartner-image-container">
-          <img src="public/images/beautypartner_logo.webp" alt="" />
+          <img src="images/beautypartner_logo.webp" alt="" />
         </div>
 
 
