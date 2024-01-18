@@ -10,6 +10,7 @@ import InnovationAI from "./pages/InnovationAI";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Borne from "./pages/Borne";
+import Ai from "./pages/Ai";
 
 import "./styles/index.scss";
 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/borne",
         element: <Borne />,
+      },
+      {
+        path: "/ai",
+        element: <Ai />,
       },
     ],
   },

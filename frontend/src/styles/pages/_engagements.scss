@@ -1,14 +1,26 @@
-.engagement-container{
-    display : flex;
-    gap:50px;
-    .title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+@keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
     }
-    img{
-        // object-fit: cover;
-        height:60vh;
+    100% {
+      opacity: 1;
     }
+  }
+
+.engagement-container {
+  display: flex;
+  gap: 50px;
+  -webkit-animation-name: fadeInOpacity;
+  animation-name: fadeInOpacity;
+  animation-duration: 2s;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    // object-fit: cover;
+    height: 60vh;
+  }
 }

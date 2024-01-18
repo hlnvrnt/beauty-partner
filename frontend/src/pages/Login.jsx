@@ -1,7 +1,8 @@
-import { React, useRef } from "react";
+import { React, useRef, useState } from "react";
 // import { Navigate } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
+
 // import { useUser } from "../context/UserContext";
 
 function Login() {
@@ -9,6 +10,10 @@ function Login() {
   const navigate = useNavigate();
   const emailRef = useRef();
   const passwordRef = useRef();
+  const [motDePasseVisible, setMotDePasseVisible] = useState(false);
+  const toggleMotDePasseVisibility = () => {
+    setMotDePasseVisible(!motDePasseVisible);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -40,7 +45,11 @@ function Login() {
               <p className="under-title">L'Oréal BeautyPartner</p>
             </div>
             <p>
-              Vous n'êtes pas encore membre ?<em> S'inscrire</em>
+              Vous n'êtes pas encore membre ?
+              <em>
+                {" "}
+                <NavLink to="/register"> S'inscrire</NavLink>
+              </em>
             </p>
             <form onSubmit={handleSubmit}>
               <div className="fields">
@@ -50,13 +59,24 @@ function Login() {
               <div className="fields">
                 <label htmlFor="password">Mot de passe</label>
                 <input
-                  type="password"
+                  type={motDePasseVisible ? "text" : "password"}
                   name=""
                   id="password"
                   ref={passwordRef}
                 />
+                <img
+                  src={
+                    motDePasseVisible
+                      ? "/images/mdpUnsee.png"
+                      : "/images/mdpSee.png"
+                  }
+                  alt="eye"
+                  className="mdp"
+                  onClick={toggleMotDePasseVisibility}
+                  role="presentation"
+                />
               </div>
-              <button type="submit">se connecter</button>
+              <button type="submit">Se connecter</button>
             </form>
           </div>
         </div>
