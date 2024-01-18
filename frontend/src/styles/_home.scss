@@ -16,6 +16,7 @@
   .image-container {
     width: 88%;
 
+
     img {
       width: 100%;
     }
@@ -31,6 +32,7 @@
 
     .bp-image-container {
       height: 120px;
+      overflow: hidden;
 
       img {
         height: 100%;
@@ -39,7 +41,8 @@
 
     .beautypartner-image-container {
       height: 80px;
-
+      overflow: hidden;
+      
       img {
         height: 100%;
       }

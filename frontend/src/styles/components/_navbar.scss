@@ -27,13 +27,30 @@ width: 100vw;
         justify-content: flex-end;
         width: 100vw;
         align-items: center;
+        
+        .account-link{
+          margin-right: 10px;
+
+          a {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            font-size:15px;
+            text-align: center;
+            
+          }
+          a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+      }
 
         .connexion-lien{
         display:flex;
         justify-content: space-around;
         width: 20vw;
         align-items: center;
-        }
+        overflow: hidden;
 
     a {
       color: var(--color-text);
@@ -47,6 +64,7 @@ width: 100vw;
 
     }
   }
+}
 
   .img-beauty{
     width : 100vw;
@@ -94,5 +112,5 @@ width: 100vw;
     }
 
   }
-}
 
+  }
