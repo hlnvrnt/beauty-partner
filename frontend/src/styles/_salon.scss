@@ -30,8 +30,21 @@
             }
             
             .mon-compte{
+                padding-bottom: 3%;
                 font-size: 1.4rem;
                 font-weight: 500;
+            }
+
+            .button-logout{
+                margin-top: 3%;
+                border: none;
+                background-color: black;
+                color: white;
+                padding: 2% 3%;
+            }
+
+            .button-logout:hover{
+                color: var(--secondary-color);
             }
 
             .nom-salon{
@@ -127,7 +140,6 @@
                 body{
                   margin: 40px 20px;
                 }
-                
             }
 
         .salon-right-bottom{
@@ -156,8 +168,19 @@
                     padding: 2% 12%;
                 }
 
+                .button-salon:hover{
+                    color: var(--secondary-color);
+                    transform: scale(1.1);
+                    transition: 0.5s;
+                }
+
                 .button-container{
                     text-align: center;
+                }
+
+                .button-container:hover{
+                    transform: scale(1.1);
+                    transition: 0.5s;
                 }
 
                 .text-next-status{

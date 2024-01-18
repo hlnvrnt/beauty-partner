@@ -1,6 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useUser } from "../context/UserContext";
 
 function Salon() {
+  const navigate = useNavigate();
+  const { userInfos, setUserInfos } = useUser();
+  const handleLogout = () => {
+    setUserInfos(null);
+    navigate("/");
+  };
+
   return (
     <div className="salon-container">
       <div className="image-container">
@@ -11,7 +19,14 @@ function Salon() {
           <div className="header">
             <div className="header-text">
               <p className="mon-compte">MON COMPTE FIDÉLITÉ</p>
-              <p>NOM DU SALON</p>
+              <p>{userInfos.name}</p>
+              <button
+                type="button"
+                className="button-logout"
+                onClick={handleLogout}
+              >
+                Déconnexion
+              </button>
             </div>
           </div>
         </div>
@@ -45,7 +60,9 @@ function Salon() {
                 </div>
               </div>
               <div className="button-container">
-                <NavLink className="button-salon">Dècouvrir ici</NavLink>
+                <Link to={`/OffresById/4`} className="button-salon">
+                  Dècouvrir ici
+                </Link>
               </div>
             </div>
 

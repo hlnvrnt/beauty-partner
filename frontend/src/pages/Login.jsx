@@ -27,15 +27,11 @@ function Login() {
       if (res.status === 200) {
         setUserInfos(res.data);
         navigate("/home");
-        console.log("test")
       }
     } catch (e) {
       console.info(e);
-      console.info(email, password)
     }
   };
-
-  console.log("context :", userInfos);
 
   return (
     <div className="login">
