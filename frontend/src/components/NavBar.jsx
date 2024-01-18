@@ -13,12 +13,12 @@ function NavBar() {
         </div>
         <div className="connexion">
           {userInfos.name ? (
+            <div className="account-link">
             <NavLink to="/account">
-              <div className="account-link">
-                <p>Mon compte</p>
                 <p>{userInfos.name}</p>
-              </div>
+                <p>Mon compte</p>
             </NavLink>
+            </div>
           ) : (
             <div className="connexion-lien">
               <NavLink to="/login">
