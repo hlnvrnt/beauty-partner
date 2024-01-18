@@ -45,7 +45,7 @@ function Salon() {
                 </div>
               </div>
               <div className="button-container">
-                <NavLink className="button">Dècouvrir ici</NavLink>
+                <NavLink className="button-salon">Dècouvrir ici</NavLink>
               </div>
             </div>
 
