@@ -64,10 +64,10 @@ VALUES
     10000
 ),
 (
-    'PRIVILÉGE',
+    'PRIVILEGE',
     'FORMATION INDIVIDUELLE',
     'Découvrez une expérience unique où la beauté rencontre l\'expertise avec notre Événement Privilège L\'Oréal. En tant que client privilégié, plongez au cœur de l\'exclusivité en bénéficiant d\'une formation individuelle dispensée par l\'un de nos talentueux conseillers L\'Oréal.',
-    '👩‍🎓 Formation Personnalisée :\n Notre équipe d/experts, véritables passionnés de la beauté, est prête à vous guider à travers une formation sur mesure. Que vous souhaitiez perfectionner votre routine de soins, maîtriser les dernières tendances maquillage, ou obtenir des conseils personnalisés, nous nous adaptons à vos besoins spécifiques.
+    '👩‍🎓 Formation Personnalisée :\n Notre équipe d\'experts, véritables passionnés de la beauté, est prête à vous guider à travers une formation sur mesure. Que vous souhaitiez perfectionner votre routine de soins, maîtriser les dernières tendances maquillage, ou obtenir des conseils personnalisés, nous nous adaptons à vos besoins spécifiques.
 
     🌈 Exploration des Produits :\n Plongez dans l\'univers captivant de L\'Oréal en explorant nos produits emblématiques. Apprenez à choisir les nuances qui rehaussent votre beauté naturelle et découvrez les secrets des formulations innovantes qui font la renommée de la marque.
 

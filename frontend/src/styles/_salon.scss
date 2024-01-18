@@ -6,7 +6,7 @@
         // height: 100%;
 
         img{
-            height: 85vh;
+            height: 90vh;
             width: 100%;
             object-fit: cover;
         }
@@ -22,7 +22,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                padding-bottom: 40px;
+                padding-bottom: 20px;
 
             .header-text{
                 text-align: center;
@@ -41,6 +41,7 @@
                 background-color: black;
                 color: white;
                 padding: 2% 3%;
+                cursor:pointer;
             }
 
             .button-logout:hover{
@@ -54,7 +55,7 @@
             }
         }
         .status-container{
-            padding: 30px 0 40px 0;
+            padding: 5% 0 5% 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -170,8 +171,8 @@
 
                 .button-salon:hover{
                     color: var(--secondary-color);
-                    transform: scale(1.1);
-                    transition: 0.5s;
+                    // transform: scale(1.1);
+                    // transition: 0.5s;
                 }
 
                 .button-container{
@@ -179,12 +180,12 @@
                 }
 
                 .button-container:hover{
-                    transform: scale(1.1);
+                    transform: scale(1.03);
                     transition: 0.5s;
                 }
 
                 .text-next-status{
-                    padding: 5% 0;
+                    padding: 8% 0;
                     text-align: center;
                 }
 

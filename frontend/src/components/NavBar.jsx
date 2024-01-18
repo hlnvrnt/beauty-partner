@@ -18,8 +18,8 @@ function NavBar() {
           {userInfos !== null ? (
             <div className="account-link">
               <NavLink to="/account">
+                <img src="/images/Avatar.webp" alt="avatar" />
                 <p>{userInfos.name}</p>
-                <p>Mon compte</p>
               </NavLink>
             </div>
           ) : (
@@ -35,7 +35,7 @@ function NavBar() {
         </div>
       </div>
       <div className="pages">
-        <NavLink to={userInfos ? `/home` : `/`}>
+        <NavLink to="/">
           <p>ACCUEIL</p>
         </NavLink>
         <NavLink to="/offres">
