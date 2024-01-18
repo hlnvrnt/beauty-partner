@@ -170,8 +170,8 @@
 
                 .button-salon:hover{
                     color: var(--secondary-color);
-                    transform: scale(1.1);
-                    transition: 0.5s;
+                    // transform: scale(1.1);
+                    // transition: 0.5s;
                 }
 
                 .button-container{
@@ -179,7 +179,7 @@
                 }
 
                 .button-container:hover{
-                    transform: scale(1.1);
+                    transform: scale(1.03);
                     transition: 0.5s;
                 }
 
