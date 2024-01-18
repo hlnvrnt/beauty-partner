@@ -1,5 +1,5 @@
-
-import React from 'react';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
@@ -14,20 +14,34 @@ function Home() {
         <div className="beautypartner-image-container">
           <img src="images/beautypartner_logo.webp" alt="" />
         </div>
-
-
+        <span style={{ fontWeight: "bold", fontSize: "22px" }}>
+          Bienvenue chez Beauty Partner, là où l'élégance rencontre
+          l'innovation.{" "}
+        </span>
         <p className="description">
-          Adhérez à notre programme exclusif afin d’accéder à des offres
-          personnalisées destinées à nos membres. Profitez de coffrets-cadeaux,
-          promotions, soirées VIP et séminaires exclusifs. Offrez à vos clients
-          un référencement sur leurs produits favoris grâce à notre borne AI
-          intégrée à votre profil professionnel.
+          Adhérez dès maintenant à notre programme exclusif et découvrez un
+          univers crée sur mesure pour votre salon de coiffure, réservé à nos
+          membres privilégiés. Profitez d'avantages personnalisés tels que des
+          coffrets-cadeaux, des promotions exclusives, des invitations aux
+          soirées VIP et des séminaires réservés aux initiés. Offrez à vos
+          clients un référencement sur leurs produits favoris grâce à notre
+          borne d'intelligence artificielle intégrée à votre profil
+          professionnel. Avec Beauty Partner, votre succès devient notre
+          priorité.
         </p>
 
         <p className="second-description">
-          Optimisez l'efficacité de votre salon dès maintenant en devenant
-          Beauty Partner.
+          {" "}
+          <NavLink to="/register"> Rejoignez-nous</NavLink> pour vivre la beauté
+          de manière unique.
         </p>
+        <div className="btn-avantage">
+          <button className="souscription" type="button">
+            <NavLink to="/offres">
+              Profitez de vos avantages dès maintenant
+            </NavLink>
+          </button>
+        </div>
       </div>
     </div>
   );
