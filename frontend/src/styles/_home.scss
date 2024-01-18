@@ -1,11 +1,11 @@
 @keyframes fadeInOpacity {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
 .home-container {
   padding-top: 5%;
@@ -15,17 +15,17 @@
   animation-duration: 2s;
 
   .image-container {
-    width: 88%;
-
+    width: 100%;
+    max-height: 80vh;
 
     img {
-      width: 100%;
+      width: 38vw;
+
     }
   }
 
   .images-logo-container {
     display: flex;
-
     overflow: hidden;
     flex-direction: column;
     text-align: center;
@@ -43,21 +43,92 @@
     .beautypartner-image-container {
       height: 80px;
       overflow: hidden;
-      
+
       img {
         height: 100%;
       }
     }
 
+    span {
+      padding: 40px 10%;
+      text-align: center;
+    }
     .description {
       padding: 20px 10%;
       font-size: 1.1rem;
+      text-align: justify;
     }
 
     .second-description {
-      padding: 40px 0;
+      padding: 30px 0;
       font-weight: bold;
       font-size: 1.1rem;
+      a {
+        color: var(--fifth-color);
+        font-weight: 500;
+        transition: transform 0.5s ease;
+        position: relative;
+      }
+      a:hover::after {
+        transform: scaleX(1);
+      }
+      a::after {
+        content: "";
+        transform-origin: 0 0;
+        transform: scaleX(0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--fifth-color);
+        z-index: -1;
+        opacity: 0.8;
+        transition: transform 0.3s;
+      }
+    }
+
+    .btn-avantage {
+      display: flex;
+      justify-content: center;
+    }
+    .souscription {
+      width: 25vw;
+      padding: 15px;
+      border: unset;
+      border-radius: 15px;
+      color: #212121;
+      z-index: 1;
+      background: var(--fourth-color);
+      position: relative;
+      font-weight: 1000;
+      font-size: 17px;
+      -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      transition: all 250ms;
+      overflow: hidden;
+    }
+    button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      border-radius: 15px;
+      background-color: #212121;
+      z-index: -1;
+      -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+      transition: all 250ms;
+    }
+
+    .souscription:hover {
+      color: #e8e8e8;
+    }
+
+    .souscription:hover::before {
+      width: 100%;
     }
   }
 }
