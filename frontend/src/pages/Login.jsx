@@ -2,11 +2,11 @@ import { React, useRef, useState } from "react";
 // import { Navigate } from "react-router-dom";
 import axios from "axios";
 import { useNavigate, NavLink } from "react-router-dom";
-
-// import { useUser } from "../context/UserContext";
+import { useUser } from "../context/UserContext";
 
 function Login() {
   // todo : importer le setter "setUserInfos" via Useconext
+  const { setUserInfos, userInfos } = useUser();
   const navigate = useNavigate();
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -20,12 +20,13 @@ function Login() {
     try {
       const email = emailRef.current.value;
       const password = passwordRef.current.value;
-      const res = await axios.post("http://localhost:3310/api/login", [
-        email,
-        password,
-      ]);
+      const res = await axios.post("http://localhost:3310/api/login", {
+        inputEmail: email,
+        inputPassword: password,
+      });
       if (res.status === 200) {
-        navigate("/offres");
+        setUserInfos(res.data);
+        navigate("/home");
       }
     } catch (e) {
       console.info(e);

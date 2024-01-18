@@ -4,16 +4,20 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
+.logo-container{
+display: flex;
+width: 100vw;
 
     .marque {
       display: flex;
       flex-direction: column;
-      width: 100vw;
+      width: 80vw;
+      padding-left: 18%;
       align-items: center;
-      margin-top: 8px;
+      padding-top: 10px;
 
       img {
-        width: 8vw;
+        width: 9vw;
       }
     }
   
@@ -23,13 +27,30 @@
         justify-content: flex-end;
         width: 100vw;
         align-items: center;
+        
+        .account-link{
+          margin-right: 10px;
+
+          a {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            font-size:15px;
+            text-align: center;
+            
+          }
+          a:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+      }
 
         .connexion-lien{
         display:flex;
         justify-content: space-around;
         width: 20vw;
         align-items: center;
-        }
+        overflow: hidden;
 
     a {
       color: var(--color-text);
@@ -43,35 +64,53 @@
 
     }
   }
+}
 
   .img-beauty{
     width : 100vw;
     display:flex;
     justify-content: center;
-    margin-bottom: 5px;
     img{
         width:20vw;
     }
 }
-
+}
 
     .pages{
         display:flex;
-        width:80vw;
-        justify-content: space-around;
+        width:100vw;
         margin-bottom: 10px;
         overflow: hidden;
+        justify-content: center;
+        
 
     a {
       color: var(--color-text);
       text-decoration: none;
       transition: transform 0.3s ease;
       font-size:13px;
+    position: relative;
+    padding : 0px 50px 0px 50px;
+
+
     }
-    a:hover {
+    p{
+      width: 100%;
+    }
+    p:hover {
       color: var(--secondary-color);
       transform: scale(1.1);
+      transition: 0.5s;
     }
-  }
-}
+    a:after{
+      content: "";
+      position: absolute;
+      top : 0px;
+      left: 0px;
+      border-right: 1px solid white;
+      height: 100%;
+    }
 
+  }
+
+  }

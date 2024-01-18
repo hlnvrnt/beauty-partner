@@ -35,9 +35,7 @@ function Register() {
       !newSalon.phone_number
     ) {
       setErrorMessage("Veuillez remplir tous les champs");
-    }
-
-    if (!newSalon.email.includes("@")) {
+    } else if (!newSalon.email.includes("@")) {
       setErrorMessage("Veuillez fournir une adresse e-mail valide");
     } else {
       try {
@@ -45,7 +43,12 @@ function Register() {
           "http://localhost:3310/api/salon",
           newSalon
         );
-        setUserInfos(res.data);
+        const res2 = await axios.post("http://localhost:3310/api/login", {
+          // on INSERT dans la DB avec les infos saisies
+          inputEmail: newSalon.email,
+          inputPassword: newSalon.password,
+        });
+        setUserInfos(res2.data);
         setSubmittedUser([...submittedUser, newSalon]);
         setNewSalon({
           name: "",
@@ -55,7 +58,7 @@ function Register() {
           phone_number: "",
         });
         setSuccessMessage(
-          `Félicitations ${res.data.name}, votre compte a bien été créé !`
+          `Félicitations ${res2.data.name}, votre compte a bien été créé !`
         );
       } catch (err) {
         console.error(err);

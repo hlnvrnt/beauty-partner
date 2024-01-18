@@ -47,6 +47,7 @@ export default function Offre() {
                 <Link to={`/OffresById/${offres.id}`}>
                   <p>Découvrez-ici</p>
                 </Link>
+                <button className="achat">Acheter</button>
               </div>
             </div>
           ))}
