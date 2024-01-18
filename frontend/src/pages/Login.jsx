@@ -26,13 +26,12 @@ function Login() {
       });
       if (res.status === 200) {
         setUserInfos(res.data);
-        navigate("/home");
+        navigate("/account");
       }
     } catch (e) {
       console.info(e);
     }
   };
-
   return (
     <div className="login">
       <div className="login-img-container">
