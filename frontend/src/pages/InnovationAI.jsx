@@ -46,13 +46,14 @@ function InnovationAI() {
           <button className="button" type="button" onClick={handleModale}>
             Commander la borne
           </button>
+
+          {showModale && (
+            <Modale isOpen={showModale} setShowModale={setShowModale} />
+          )}
+          <NavLink to="/borne">
+            <h3>Cliquez ici pour tester notre borne AI </h3>
+          </NavLink>
         </div>
-        {showModale && (
-          <Modale isOpen={showModale} setShowModale={setShowModale} />
-        )}
-        <NavLink to="/borne">
-          <h3>Cliquez ici pour tester notre borne AI </h3>
-        </NavLink>
       </div>
     </div>
   );
