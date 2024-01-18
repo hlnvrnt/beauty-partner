@@ -10,7 +10,6 @@ function Engagements() {
           <p>Faire tout ce qui est en notre pouvoir pour être exemplaire</p>
         </div>
       </div>
-
       <div className="first-container">
         <div className="text">
           <h2>Vers un business model toujours plus responsable et durable</h2>

@@ -16,7 +16,11 @@ function Register() {
   const [submittedUser, setSubmittedUser] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+
+  const [motDePasseVisible, setMotDePasseVisible] = useState(false);
+  const toggleMotDePasseVisibility = () => {
+    setMotDePasseVisible(!motDePasseVisible);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,9 +70,6 @@ function Register() {
       }
     }
   };
-  const PasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
 
   return (
     <div className="login">
@@ -93,7 +94,11 @@ function Register() {
               <p className="under-title">L'Oréal BeautyPartner</p>
             </div>
             <p>
-              Déjà membre partenaire ?<em> Connectez-vous</em>
+              Déjà membre partenaire ?
+              <em>
+                {" "}
+                <NavLink to="/Login">Connectez-vous</NavLink>
+              </em>
             </p>
             <form onSubmit={handleSubmit}>
               <div className="fields">
@@ -147,13 +152,24 @@ function Register() {
               <div className="fields">
                 <label htmlFor="password">Mot de passe</label>
                 <input
-                  type="password"
+                  type={motDePasseVisible ? "text" : "password"}
                   name=""
                   id="password"
                   value={newSalon.password}
                   onChange={(e) =>
                     setNewSalon({ ...newSalon, password: e.target.value })
                   }
+                />
+                <img
+                  src={
+                    motDePasseVisible
+                      ? "/images/mdpUnsee.png"
+                      : "/images/mdpSee.png"
+                  }
+                  alt="eye"
+                  className="mdp"
+                  onClick={toggleMotDePasseVisibility}
+                  role="presentation"
                 />
               </div>
               <button type="submit">S'incrire</button>

@@ -5,9 +5,11 @@ function NavBar() {
   const { userInfos } = useUser();
   return (
     <div className="navbar">
-        <div className="logo-container">
+      <div className="logo-container">
         <div className="marque">
+          <NavLink to="/">
           <img src="/images/logo.png" alt="logo" />
+          </NavLink>
         </div>
         <div className="connexion">
           {userInfos.name ? (
@@ -28,10 +30,10 @@ function NavBar() {
             </div>
           )}
         </div>
-          <div className="img-beauty">
+        <div className="img-beauty">
           <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
-          </div>
-          </div> 
+        </div>
+      </div>
       <div className="pages">
         <NavLink to="/">
           <p>ACCUEIL</p>

@@ -9,7 +9,9 @@ import Partenaires from "./pages/Partenaires";
 import InnovationAI from "./pages/InnovationAI";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Salon from "./pages/Salon";
 import Borne from "./pages/Borne";
+import Ai from "./pages/Ai";
 
 import "./styles/index.scss";
 
@@ -47,8 +49,16 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: "/salon",
+        element: <Salon />,
+      },
+      {
         path: "/borne",
         element: <Borne />,
+      },
+      {
+        path: "/ai",
+        element: <Ai />,
       },
     ],
   },
