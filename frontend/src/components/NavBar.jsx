@@ -15,7 +15,7 @@ function NavBar() {
           </div>
         </div>
         <div className="connexion">
-          {userInfos.name ? (
+          {userInfos !== null ? (
             <div className="account-link">
               <NavLink to="/account">
                 <img src="/images/Avatar.webp" alt="avatar" />

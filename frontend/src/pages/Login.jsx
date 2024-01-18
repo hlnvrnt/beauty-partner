@@ -23,10 +23,10 @@ function Login() {
       const res = await axios.post("http://localhost:3310/api/login", {
         inputEmail: email,
         inputPassword: password,
-    });
+      });
       if (res.status === 200) {
-        navigate("/offres");
         setUserInfos(res.data);
+        navigate("/account");
       }
     } catch (e) {
       console.info(e);
