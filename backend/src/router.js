@@ -16,6 +16,7 @@ const orderControllers = require("./controllers/orderControllers");
 
 // Route to get events
 router.get("/events", eventControllers.browse); // test OK
+router.get("/events/:id", eventControllers.read);
 
 
 // Route to get a specific item by ID
