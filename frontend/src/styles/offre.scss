@@ -1,68 +1,74 @@
-.container-page-offre{
-    padding-bottom: 40px;
-    .nouveaute-offre
-    {
-        h1{
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-        }
+.container-page-offre {
+  padding-bottom: 40px;
+  -webkit-animation-name: fadeInOpacity;
+  animation-name: fadeInOpacity;
+  animation-duration: 2s;
+  .nouveaute-offre {
+    h1 {
     }
-    .container-offre{
-        .offre{
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 80px;
-            padding-top: 80px;
-            .offre-1{
-                width: 35%;
-                display: flex;
-                margin: 0 auto;
-                
-                
-                
-                .rond{
-                    width: 200px;
-                    height: 200px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 30px;
-                
-                }
-.rond.card-0{
-    border: 5px solid #62A8FF;
-}
-.rond.card-1{
-    border: 5px solid #3AE2D8;
-}
-.rond.card-2{
-    border: 5px solid #0053BB;
-}
-.rond.card-3{
-    background-color: #4D4083;
-    color: white;
-}
-.rond.card-4{
-    background-color: #508FBB;
-    color: white;
-}
-.rond.card-5{
-    background-color: #44546A;
-    color: white;
-}
-.name{
-    width: 35%;
-}
-.points-offre{
+  }
+  .container-offre {
+    .offre {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 80px;
+      padding-top: 80px;
+      .offre-1 {
+        width: 35%;
+        display: flex;
+        margin: 0 auto;
 
-    h2{
-font-size: 40px;
-    }
-    h3{
-        font-size: 20px;
-    }
-}
-            }
+        .rond {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
         }
+        .rond.card-0 {
+          border: 5px solid #62a8ff;
+        }
+        .rond.card-1 {
+          border: 5px solid #3ae2d8;
+        }
+        .rond.card-2 {
+          border: 5px solid #0053bb;
+        }
+        .rond.card-3 {
+          background-color: #4d4083;
+          color: white;
+        }
+        .rond.card-4 {
+          background-color: #508fbb;
+          color: white;
+        }
+        .rond.card-5 {
+          background-color: #44546a;
+          color: white;
+        }
+        .name {
+          width: 35%;
+        }
+        .points-offre {
+          h2 {
+            font-size: 40px;
+          }
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
     }
+  }
 }
