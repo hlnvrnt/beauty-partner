@@ -23,7 +23,13 @@ function Register() {
 
     setErrorMessage("");
 
-    if (!newSalon.name || !newSalon.email || !newSalon.password || !newSalon.address || !newSalon.phone_number) {
+    if (
+      !newSalon.name ||
+      !newSalon.email ||
+      !newSalon.password ||
+      !newSalon.address ||
+      !newSalon.phone_number
+    ) {
       setErrorMessage("Veuillez remplir tous les champs");
     }
 
@@ -31,17 +37,32 @@ function Register() {
       setErrorMessage("Veuillez fournir une adresse e-mail valide");
     } else {
       try {
-        const res = await axios.post("http://localhost:3310/api/salon", newSalon);
+        const res = await axios.post(
+          "http://localhost:3310/api/salon",
+          newSalon
+        );
         setUserInfos(res.data);
         setSubmittedUser([...submittedUser, newSalon]);
-        setNewSalon({ name: "", email: "", password: "", address: "", phone_number: ""});
+        setNewSalon({
+          name: "",
+          email: "",
+          password: "",
+          address: "",
+          phone_number: "",
+        });
         setSuccessMessage(
           `Félicitations ${res.data.name}, votre compte a bien été créé !`
         );
       } catch (err) {
         console.error(err);
         setErrorMessage("Cet utilisateur existe déjà.");
-        setNewSalon({ name: "", email: "", password: "", address: "", phone_number: "" });
+        setNewSalon({
+          name: "",
+          email: "",
+          password: "",
+          address: "",
+          phone_number: "",
+        });
       }
     }
   };
@@ -57,6 +78,16 @@ function Register() {
       <div className="login-connexion-container">
         <div className="login-content-connexion-background">
           <div className="login-content-connexion">
+            {errorMessage !== "" && (
+              <div className="message">
+                <p className="error">{errorMessage}</p>
+              </div>
+            )}
+            {successMessage !== "" && (
+              <div className="message">
+                <p className="error">{successMessage}</p>
+              </div>
+            )}
             <div>
               <h2>Formulaire d'inscription</h2>
               <p className="under-title">L'Oréal BeautyPartner</p>
@@ -65,7 +96,7 @@ function Register() {
               Déjà membre partenaire ?<em> Connectez-vous</em>
             </p>
             <form onSubmit={handleSubmit}>
-            <div className="fields">
+              <div className="fields">
                 <label htmlFor="name">Nom du salon</label>
                 <input
                   type="name"

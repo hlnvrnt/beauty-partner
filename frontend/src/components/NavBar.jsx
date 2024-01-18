@@ -7,7 +7,7 @@ function NavBar() {
     <div className="navbar">
         <div className="logo-container">
         <div className="marque">
-          <img src="/images/logo.jpg" alt="logo" />
+          <img src="/images/logo.png" alt="logo" />
         </div>
         <div className="connexion">
           {userInfos.name ? (
