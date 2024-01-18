@@ -15,8 +15,8 @@ function NavBar() {
           {userInfos.name ? (
             <div className="account-link">
             <NavLink to="/account">
+              <img src="/images/Avatar.webp" alt="avatar"/>
                 <p>{userInfos.name}</p>
-                <p>Mon compte</p>
             </NavLink>
             </div>
           ) : (

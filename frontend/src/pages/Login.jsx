@@ -32,9 +32,6 @@ function Login() {
       console.info(e);
     }
   };
-
-  console.log('context :',userInfos);
-
   return (
     <div className="login">
       <div className="login-img-container">

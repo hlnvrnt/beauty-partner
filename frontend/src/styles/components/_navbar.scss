@@ -25,7 +25,11 @@
         align-items: center;
         
         .account-link{
-          margin-right: 10px;
+          margin-right: 40px;
+
+          img{
+            height:5vh;
+          }
 
           a {
             color: var(--color-text);
