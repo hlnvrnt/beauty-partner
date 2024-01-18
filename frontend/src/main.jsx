@@ -9,7 +9,11 @@ import Partenaires from "./pages/Partenaires";
 import InnovationAI from "./pages/InnovationAI";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+<<<<<<< HEAD
 import Salon from "./pages/Salon";
+=======
+import Borne from "./pages/Borne";
+>>>>>>> 753ca880cb70066acee14f6ed75c4b547568a015
 
 import "./styles/index.scss";
 
@@ -47,8 +51,13 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+<<<<<<< HEAD
         path: "/salon",
         element: <Salon />,
+=======
+        path: "/borne",
+        element: <Borne />,
+>>>>>>> 753ca880cb70066acee14f6ed75c4b547568a015
       },
     ],
   },

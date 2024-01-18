@@ -1,32 +1,17 @@
 const tables = require("../tables");
 
-const argon2 = require("argon2");
-
 // todo : ajouter next pour le validator
 
 const login = async (req, res) => {
-  try{
-    const user = await tables.user.getByMail(req.body.inputEmail); // permet d'appeler un model qui va interroger la BDD pour sortir les infos du users via son adresse e-mail
-    console.log('auth controllers', user)
-    if (user == null) {
-      res.status(200).send(user);
-      return;
-    } 
-    const verified = await argon2.verify(
-      user.hashed_password,
-      req.body.inputPassword
-    );
-    if (verified) {
-      // Respond with the user in JSON format (but without the hashed password)
-      delete user.hashed_password;
-  
-      res.json(user);
-    } else {
-      res.sendStatus(422);
-    }
+  const salon = await tables.Salon.getByMail(req.body.inputEmail); // permet d'appeler un model qui va interroger la BDD pour sortir les infos du users via son adresse e-mail
+  const password = req.body.inputPassword; // on récupère le password fourni par le front (via méthode POST via le body)
 
-  } catch(err){
-    console.log(err);
+  if (salon?.password === password) {
+    // rappel : le ? permet de couvrir le cas de undefined
+    // on compare le password de la BDD de notre user avec celui du front
+    res.status(200).send(salon);
+  } else {
+    res.status(400).send("incorrect email or password");
   }
 };
 

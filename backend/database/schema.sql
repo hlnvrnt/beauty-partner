@@ -10,9 +10,9 @@ CREATE TABLE
         id INT PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(80) NOT NULL,
         email  VARCHAR(80) NOT NULL,
-        hashed_password VARCHAR(50) NOT NULL DEFAULT 'beauty',
+        password VARCHAR(50) NOT NULL DEFAULT 'beauty',
         address VARCHAR(250),
-        phone_number VARCHAR(80) NOT NULL,
+        phone_number VARCHAR(80),
         point INT NOT NULL DEFAULT 0,
         is_subscription BOOLEAN NOT NULL DEFAULT 0
     );
@@ -22,6 +22,7 @@ CREATE TABLE
     Event (
         id INT PRIMARY KEY AUTO_INCREMENT,
         name VARCHAR(80) NOT NULL,
+        surname VARCHAR(255) NOT NULL,
         description  TEXT NOT NULL,
         program TEXT NOT NULL,
         image VARCHAR(255) NOT NULL,
@@ -42,17 +43,18 @@ CREATE TABLE
 
 
 -- Insert into DB
-INSERT INTO Salon (name, email, hashed_password, address, phone_number, point, is_subscription)
+INSERT INTO Salon (name, email, password, address, phone_number, point, is_subscription)
 VALUES
     ('Le Charme Beauty', 'charme_beauty@mail.com', 'hashed_charme_password', '123 Rue Principale, Paris, France', '+33 1 23 45 67 89', 22000, 1),
     ('Belle Vue Salon', 'belle_vue@mail.com', 'hashed_bellevue_password', '456 Avenue des Roses, Lyon, France', '+33 4 56 78 90 12', 15000, 0),
     ('Éclat Glamour', 'eclat_glamour@mail.com', 'hashed_eclat_password', '789 Rue de la Mode, Milan, Italy', '+39 02 3456 7890', 60500, 1),
     ('Lumière du Style', 'lumiere_style@mail.com', 'hashed_lumiere_password', '321 Boulevard Élégance, Madrid, Spain', '+34 91 234 5678', 35000, 0);
 
-INSERT INTO Event (name, description, program, image, value) 
+INSERT INTO Event (name,surname, description, program, image, value) 
 VALUES 
 (
-    'INITIAL', 
+    'INITIAL',
+    'COFFRET - CADEEAU & PROMOTION',
     'Plongez dans l/univers de la beauté ultime avec nos coffrets cadeaux L/Oréal, une célébration de l/élégance intemporelle et de l/innovation contemporaine. Chaque coffret est une invitation à l/expérience sensorielle, capturant l/essence même du raffinement et de la confiance en soi.',
     '✨ Une Sélection Exquise : Nos coffrets regorgent des produits les plus emblématiques de L/Oréal, soigneusement sélectionnés pour offrir une expérience complète de beauté. Des formules luxueuses aux couleurs éblouissantes, chaque produit incarne l/excellence et l/attention portée aux détails.
 
@@ -63,7 +65,8 @@ VALUES
     10000
 ),
 (
-    'PRIVILEGE',
+    'PRIVILÉGE',
+    'FORMATION INDIVIDUELLE',
     'Découvrez une expérience unique où la beauté rencontre l/expertise avec notre Événement Privilège L/Oréal. En tant que client privilégié, plongez au cœur de l/exclusivité en bénéficiant d/une formation individuelle dispensée par l/un de nos talentueux conseillers L/Oréal.',
     '👩‍🎓 Formation Personnalisée : Notre équipe d/experts, véritables passionnés de la beauté, est prête à vous guider à travers une formation sur mesure. Que vous souhaitiez perfectionner votre routine de soins, maîtriser les dernières tendances maquillage, ou obtenir des conseils personnalisés, nous nous adaptons à vos besoins spécifiques.
 
@@ -76,7 +79,8 @@ VALUES
     20000
 ),
 (
-    'PRESTIGE', 
+    'PRESTIGE',
+    'DECOOUVERTE LABORATOIRE',
     'Bienvenue à la "Découverte des Coulisses de l/Innovation L/Oréal", une opportunité exclusive de plonger dans l/univers fascinant de la recherche et de l/innovation dans le domaine de la beauté. Nous sommes ravis de vous convier à une visite immersive de l/un de nos prestigieux Centres de Recherche et d/Innovation, où la science et la créativité se rencontrent pour façonner l/avenir de la beauté.', 
     '🔍 Exploration des Laboratoires : Participez à une expérience immersive en explorant nos laboratoires de pointe. Découvrez les technologies de pointe utilisées dans le développement de nos produits révolutionnaires et apprenez comment la recherche L/Oréal redéfinit les normes de l/industrie.
 
@@ -92,7 +96,8 @@ VALUES
     30000
 ),
 (
-    'ELITE', 
+    'ELITE',
+    'VENTE PRIVÉES',
     'Nous sommes ravis de vous annoncer une occasion unique de vivre la magie de L/Oréal sans quitter le confort de votre salon. Laissez-nous venir à votre rencontre pour un moment exceptionnel de partage, de présentations et de conseils en produits capillaires.', 
     '🌟 L/Oréal s/invite chez Vous : Une Expérience Beauté Exclusive dans le Confort de Votre Salon ! 🌟
 
@@ -111,7 +116,8 @@ VALUES
     40000
 ),
 (
-    'PLATINE', 
+    'PLATINE',
+    'ÉVENEMENT VIP',
     'Nous avons le plaisir de vous convier à notre événement exclusif Platinum VIP L/Oréal, une expérience réservée à nos clients les plus distingués. Rejoignez-nous pour une soirée exceptionnelle dédiée à la beauté, au luxe et à l/élégance.', 
     '👑 Statut Platinum VIP : En tant que client VIP L/Oréal Platinum, vous êtes au cœur de notre attention. Profitez d/un traitement exclusif et de privilèges réservés aux amateurs de beauté qui recherchent l/excellence.
 
@@ -131,6 +137,7 @@ VALUES
 ),
 (
     'ULTIME', 
+    'VOYAGES SEMINAIRE',
     'L/Oréal vous invite à une expérience inédite, alliant le raffinement du voyage à la découverte des tendances beauté mondiales. Joignez-vous à nous pour un séminaire exclusif qui transcendera les frontières de la beauté.', 
     '🌆 Destinations Iconiques : Partez à la conquête de destinations emblématiques soigneusement sélectionnées pour leur charme et leur inspiration. Des métropoles cosmopolites aux retraites exotiques, chaque lieu a été choisi pour stimuler votre créativité et élargir votre perspective.
 

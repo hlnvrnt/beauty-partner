@@ -1,26 +1,40 @@
 import { NavLink } from "react-router-dom";
-// import { useUser } from "../context/UserContext";
+import { useUser } from "../context/UserContext";
+
 function NavBar() {
-  // const { userInfos } = useUser();
+  const { userInfos } = useUser();
   return (
     <div className="navbar">
-      <div className="first-container">
+        <div className="logo-container">
         <div className="marque">
           <img src="/images/logo.jpg" alt="logo" />
-          <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
         </div>
         <div className="connexion">
-          <NavLink to="/login">
-            <p>CONNEXION</p>
-          </NavLink>
-          <NavLink to="/register">
-            <p>INSCRIPTION</p>
-          </NavLink>
+          {userInfos.name ? (
+            <NavLink to="/account">
+              <div className="account-link">
+                <p>Mon compte</p>
+                <p>{userInfos.name}</p>
+              </div>
+            </NavLink>
+          ) : (
+            <div className="connexion-lien">
+              <NavLink to="/login">
+                <p>CONNEXION</p>
+              </NavLink>
+              <NavLink to="/register">
+                <p>INSCRIPTION</p>
+              </NavLink>
+            </div>
+          )}
         </div>
-      </div>
+          <div className="img-beauty">
+          <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
+          </div>
+          </div> 
       <div className="pages">
         <NavLink to="/">
-          <p>NOUVEAUTES</p>
+          <p>ACCUEIL</p>
         </NavLink>
         <NavLink to="/offres">
           <p>NOS OFFRES</p>

@@ -1,3 +1,6 @@
+
+import React from 'react';
+
 function Home() {
   return (
     <div className="home-container">
@@ -11,6 +14,7 @@ function Home() {
         <div className="beautypartner-image-container">
           <img src="public/images/beautypartner_logo.webp" alt="" />
         </div>
+
 
         <p className="description">
           Adhérez à notre programme exclusif afin d’accéder à des offres
