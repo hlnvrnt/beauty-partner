@@ -8,19 +8,19 @@ function NavBar() {
       <div className="logo-container">
         <div className="marque">
           <NavLink to="/">
-          <img src="/images/logo.png" alt="logo" />
+            <img src="/images/logo.png" alt="logo" />
           </NavLink>
           <div className="img-beauty">
-          <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
-        </div>
+            <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
+          </div>
         </div>
         <div className="connexion">
-          {userInfos.name ? (
+          {userInfos !== null ? (
             <div className="account-link">
-            <NavLink to="/account">
+              <NavLink to="/account">
                 <p>{userInfos.name}</p>
                 <p>Mon compte</p>
-            </NavLink>
+              </NavLink>
             </div>
           ) : (
             <div className="connexion-lien">
@@ -33,10 +33,9 @@ function NavBar() {
             </div>
           )}
         </div>
-        
       </div>
       <div className="pages">
-        <NavLink to="/">
+        <NavLink to={userInfos ? `/home` : `/`}>
           <p>ACCUEIL</p>
         </NavLink>
         <NavLink to="/offres">

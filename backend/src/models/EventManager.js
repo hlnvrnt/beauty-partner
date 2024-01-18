@@ -8,6 +8,10 @@ class EventManager extends AbstractManager {
   async read(id) {
     const [result] = await this.database.query(
       `SELECT * FROM ${this.table} WHERE id=?`,
+      [id]
+    );
+    return result;
+  }
 
   async readEventBySalonId(id) {
     const [result] = await this.database.query(
