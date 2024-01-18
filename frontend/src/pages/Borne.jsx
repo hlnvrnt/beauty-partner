@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Borne() {
   return (
     <div className="container-borne">
@@ -22,8 +24,8 @@ function Borne() {
               placeholder="Décrivez votre problème ici"
             />
           </form>
-          <button className="validate" type="submit">
-            VALIDER
+          <button className="button" type="submit">
+            <NavLink to="/ai">VALIDER</NavLink>
           </button>
         </div>
       </div>

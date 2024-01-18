@@ -74,7 +74,7 @@ VALUES
     💄 Techniques de Maquillage Avancées :\n Développez vos compétences en maquillage avec des techniques avancées enseignées par nos conseillers expérimentés. Que vous soyez novice ou expert, découvrez des astuces pour sublimer vos traits et créer des looks époustouflants.
 
     📅 Réservez Votre Place :\n Cet événement exclusif est une opportunité rare d\'approfondir vos connaissances et de perfectionner vos compétences. Réservez votre place dès maintenant pour une session de formation individuelle, et laissez-vous guider par nos experts pour révéler votre beauté unique.',
-    '/images/formation.jpg', 
+    '/images/img-4.jpg', 
     20000
 ),
 (
@@ -91,7 +91,7 @@ VALUES
     📸 Souvenirs Personnalisés :\n Repartez avec des souvenirs personnalisés de votre visite, y compris des échantillons exclusifs des produits en cours de développement. Vivez une expérience mémorable au cœur de l\'innovation L\'Oréal.
 
     📆 Réservez Votre Place pour la Découverte des Coulisses de l\'Innovation :\n Les places pour cette expérience immersive sont limitées. Réservez dès maintenant pour explorer les coulisses de l\'innovation L\'Oréal et découvrez comment nous façonnons l\'avenir de la beauté.',
-    '/images/laboratoire.jpg' , 
+    '/images/img-1.jpg' , 
     30000
 ),
 (
@@ -131,7 +131,7 @@ VALUES
     🎁 Cadeaux Prestigieux :\n En tant que VIP, recevez des cadeaux de prestige et des échantillons de nos produits les plus prisés. Chaque détail est pensé pour vous offrir une expérience unique et inoubliable.
 
     📆 Réservez Votre Place :\n Le nombre de places pour cet événement exclusif est limité. Réservez dès maintenant votre place pour une journée placée sous le signe du luxe, de la beauté et de l\'élégance.',
-    '/images/eventVIP.jpg', 
+    '/images/img-3.jpg', 
     50000
 ),
 (
@@ -150,6 +150,6 @@ VALUES
 
     🥂 Soirées Élégantes :\n Terminez chaque journée en beauté avec des soirées élégantes organisées dans des lieux prestigieux. Célébrez le succès, échangez des idées et profitez d/un networking exclusif avec des professionnels de la beauté du monde entier.
 
-    📆 Réservez Votre Place au Séminaire Mondial L\'Oréal : Les places pour cette expérience exceptionnelle sont limitées. Réservez votre participation dès maintenant pour vivre un séminaire qui transcendera les frontières de la beauté et vous laissera des souvenirs impérissables.',
-    '/images/seminaire.jpg' , 
+    📆 Réservez Votre Place au Séminaire Mondial L\'Oréal :\n Les places pour cette expérience exceptionnelle sont limitées. Réservez votre participation dès maintenant pour vivre un séminaire qui transcendera les frontières de la beauté et vous laissera des souvenirs impérissables.',
+    '/images/img-2.jpg' , 
     60000);

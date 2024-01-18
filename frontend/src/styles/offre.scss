@@ -84,5 +84,38 @@ color: #508FBB;
 }
             }
         }
+        .rond.card-0 {
+          border: 5px solid #62a8ff;
+        }
+        .rond.card-1 {
+          border: 5px solid #3ae2d8;
+        }
+        .rond.card-2 {
+          border: 5px solid #0053bb;
+        }
+        .rond.card-3 {
+          background-color: #4d4083;
+          color: white;
+        }
+        .rond.card-4 {
+          background-color: #508fbb;
+          color: white;
+        }
+        .rond.card-5 {
+          background-color: #44546a;
+          color: white;
+        }
+        .name {
+          width: 35%;
+        }
+        .points-offre {
+          h2 {
+            font-size: 40px;
+          }
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
     }
-}
+  

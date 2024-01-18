@@ -9,8 +9,10 @@ import Partenaires from "./pages/Partenaires";
 import InnovationAI from "./pages/InnovationAI";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Salon from "./pages/Salon";
 import Borne from "./pages/Borne";
 import OffresById, { offrebyid } from "./pages/OffresById";
+import Ai from "./pages/Ai";
 
 import "./styles/index.scss";
 
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: "/salon",
+        element: <Salon />,
+      },
+      {
         path: "/borne",
         element: <Borne />,
       },
@@ -55,6 +61,10 @@ const router = createBrowserRouter([
         path: "/OffresById/:id",
         element: <OffresById />,
         loader: offrebyid,
+      },
+      {
+        path: "/ai",
+        element: <Ai />,
       },
     ],
   },
