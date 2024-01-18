@@ -72,17 +72,19 @@
       display: flex;
       .img-offre{
 
-display: flex;
+        display: flex;
         width: 60%;
+        max-height: 70vh;
         img {
           width: 500px;
+          object-fit: cover;
         }
       }
       .desc-pro{
-        padding-left: 20px;
+        padding: 0 5vw 0 5vw;
         .description {
           width: 100%;
-          font-size: 20px;
+          font-size: 1.2rem;
           font-weight: bold;
  
 
@@ -91,7 +93,7 @@ display: flex;
           margin-top: 5px;
           p{
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 1rem;
           }
         }
 
