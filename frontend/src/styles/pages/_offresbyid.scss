@@ -1,0 +1,102 @@
+.container-offrebyid {
+  width: 100%;
+  padding: 20px 80px 20px 80px;
+
+  .flex-rond {
+    
+    .rond {
+      flex-direction: column;
+      width: 200px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 25px;
+      border : none;
+
+      p{
+        font-size: 20px;
+        
+      }
+    }
+
+    .card-0{
+      width: 100%;
+        color: #62A8FF;
+        text-align: center;
+        
+        
+    } 
+    .card-1{
+      width: 100%;
+        color: var(--secondary-color);
+        text-align: center;
+        background-color: white;
+        
+        
+    } 
+    .card-2{
+      width: 100%;
+        color: #0053BB;
+        text-align: center;
+        background-color: white;
+        
+        
+    } 
+    .card-3{
+      width: 100%;
+        color: #4D4083;
+        text-align: center;
+        background-color: white;
+        
+        
+    } 
+    .card-4{
+      width: 100%;
+        color: #508FBB;
+        text-align: center;
+        background-color: white;
+        
+        
+    } 
+    .card-5{
+      width: 100%;
+        color: #44546A;
+        text-align: center;
+        background-color: white;
+        
+    } 
+    .img-description{
+      margin-top: 20px;
+      display: flex;
+      .img-offre{
+
+display: flex;
+        width: 60%;
+        img {
+          
+        }
+      }
+      .desc-pro{
+        padding-left: 20px;
+        .description {
+          width: 100%;
+          font-size: 20px;
+          font-weight: bold;
+ 
+
+        }
+        .programe{
+          margin-top: 5px;
+          p{
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+        }
+
+      }
+    
+
+    } }
+}

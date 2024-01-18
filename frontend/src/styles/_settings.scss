@@ -5,13 +5,13 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 html,
 body,
 :root {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -35,4 +35,26 @@ background-color: var(--secondary-color);
   --sixth-color: #0053BB;
   --title-font-size: 30px;
   --text-second-font-size: 18px;
+}
+
+.rond.card-0{
+  border: 5px solid #62A8FF;
+}
+.rond.card-1{
+  border: 5px solid var(--secondary-color);
+}
+.rond.card-2{
+  border: 5px solid #0053BB;
+}
+.rond.card-3{
+  background-color: #4D4083;
+  color: white;
+}
+.rond.card-4{
+  background-color: #508FBB;
+  color: white;
+}
+.rond.card-5{
+  background-color: #44546A;
+  color: white;
 }

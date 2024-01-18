@@ -1,6 +1,18 @@
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .innovation-container {
   display: flex;
   flex-direction: row-reverse;
+  -webkit-animation-name: fadeInOpacity;
+  animation-name: fadeInOpacity;
+  animation-duration: 2s;
 
   .img-container {
     img {

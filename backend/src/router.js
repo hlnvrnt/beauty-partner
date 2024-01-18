@@ -19,6 +19,7 @@ router.post("/login", authControllers.login);
 
 // Route to get events
 router.get("/events", eventControllers.browse); // test OK
+router.get("/events/:id", eventControllers.read);
 
 // Route to get a specific item by ID
 router.get("/salon/:id", salonControllers.readById); // test OK

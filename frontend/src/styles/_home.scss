@@ -1,48 +1,61 @@
-.home-container{
+@keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.home-container {
+  display: flex;
+  padding-top: 20px;
+  -webkit-animation-name: fadeInOpacity;
+  animation-name: fadeInOpacity;
+  animation-duration: 2s;
+
+  .image-container {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .images-logo-container {
+    padding-top: 70px;
     display: flex;
     padding-top: 20px;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
 
-    .image-container{
-        width: 100%;
-        
-        img{
-            width: 100%;
-        }
+    .bp-image-container {
+      height: 120px;
+
+      img {
+        height: 100%;
+      }
     }
-    
-    .images-logo-container{
-        padding-top: 70px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
 
-        .bp-image-container{
-            height: 120px;
+    .beautypartner-image-container {
+      height: 80px;
 
-            img{
-                height: 100%;
-            }
-        }
-
-        .beautypartner-image-container{
-            height: 80px;
-
-            img{
-                height: 100%;
-            }
-
-        }
-
-        .description{
-            padding: 20px 10%;
-            font-size: 1.1rem;
-        }
-
-        .second-description{
-            padding: 40px 0;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+      img {
+        height: 100%;
+      }
     }
+
+    .description {
+      padding: 20px 10%;
+      font-size: 1.1rem;
+    }
+
+    .second-description {
+      padding: 40px 0;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
 }
