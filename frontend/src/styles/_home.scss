@@ -9,13 +9,12 @@
 
 .home-container {
   display: flex;
-  padding-top: 20px;
   -webkit-animation-name: fadeInOpacity;
   animation-name: fadeInOpacity;
   animation-duration: 2s;
 
   .image-container {
-    width: 100%;
+    width: 88%;
 
     img {
       width: 100%;
@@ -23,9 +22,8 @@
   }
 
   .images-logo-container {
-    padding-top: 70px;
     display: flex;
-    padding-top: 20px;
+
     overflow: hidden;
     flex-direction: column;
     text-align: center;

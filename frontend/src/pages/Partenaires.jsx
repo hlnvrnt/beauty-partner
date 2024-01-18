@@ -7,7 +7,6 @@ function Partenaires() {
         <div className="marques-caption-container">
           <img src="/images/caption.png" alt="citation" />
         </div>
-        <p className="discover">Découvrez</p>
       </div>
       <div className="marques-content-container">
         <div className="content-texts">

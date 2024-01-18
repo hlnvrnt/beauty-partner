@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
@@ -38,7 +39,7 @@ function OffresById() {
               </div>
               <div className="desc-pro">
                 <div className="description">{offre.description}</div>
-                <br/>
+                <br />
                 <div className="programe">
                   {offre.program.split("\n").map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>

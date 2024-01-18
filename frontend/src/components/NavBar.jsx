@@ -10,6 +10,9 @@ function NavBar() {
           <NavLink to="/">
           <img src="/images/logo.png" alt="logo" />
           </NavLink>
+          <div className="img-beauty">
+          <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
+        </div>
         </div>
         <div className="connexion">
           {userInfos.name ? (
@@ -30,9 +33,7 @@ function NavBar() {
             </div>
           )}
         </div>
-        <div className="img-beauty">
-          <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
-        </div>
+        
       </div>
       <div className="pages">
         <NavLink to="/">
