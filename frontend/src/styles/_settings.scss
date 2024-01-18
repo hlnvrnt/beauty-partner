@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+ 
 }
 
 html,
@@ -19,7 +20,7 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-background-color: var(--secondary-color);
+background-color: var(--fourth-color);
   border-radius: 5px;
 
 }

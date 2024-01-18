@@ -1,5 +1,17 @@
+@keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 .container-page-offre{
     padding-bottom: 40px;
+    -webkit-animation-name: fadeInOpacity;
+    animation-name: fadeInOpacity;
+    animation-duration: 2s;
     .nouveaute-offre{
     h1{
         font-weight: 100;

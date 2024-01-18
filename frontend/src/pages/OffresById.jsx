@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export const offrebyid = async ({ params }) => {
   try {
@@ -22,7 +22,9 @@ function OffresById() {
   return (
     <div className="container-offrebyid">
       <div>
-        <h1>Offres</h1>
+        <Link to="/offres">
+          <p>RETOUR</p>
+        </Link>
         <div>
           <div className="flex-rond">
             <div className={`rond card-${offre.id - 1}`}>
@@ -30,10 +32,11 @@ function OffresById() {
 
               <p>{offre.surname}</p>
             </div>
-
+            <div className="trait" />
             <div className="img-description">
               <div className="img-offre">
                 <img
+                  className="border-img"
                   src={`${import.meta.env.VITE_BACKEND_URL}${offre.image}`}
                 />
               </div>
