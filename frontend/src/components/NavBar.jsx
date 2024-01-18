@@ -43,7 +43,7 @@ function NavBar() {
           <p>NOS ENGAGEMENTS</p>
         </NavLink>
         <NavLink to="/partenaires">
-          <p>NOS PARTENAIRES</p>
+          <p>NOS MARQUES</p>
         </NavLink>
         <NavLink to="/innovation">
           <p>INNOVATION AI</p>
