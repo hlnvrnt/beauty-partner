@@ -53,6 +53,7 @@
         justify-content: space-between;
         align-items: center;
         height: 10vw;
+    
         input:focus {
           outline-color: var(--secondary-color);
         }
@@ -63,13 +64,14 @@
           text-align: center;
           background-color: rgba(255, 255, 255, 0.789);
           border: none;
+          
         }
         p {
           text-align: center;
           background-color: rgba(255, 255, 255, 0.789);
           width: 25vw;
           height: 3vw;
-
+          overflow: hidden;
           font-weight: 500;
           font-size: 18px;
           padding: 15px;

@@ -50,6 +50,7 @@ class SalonManager extends AbstractManager {
       `SELECT * from ${this.table} WHERE email = ?`,
       [email]
     );
+    console.log(result);
     return result[0];
   }
 

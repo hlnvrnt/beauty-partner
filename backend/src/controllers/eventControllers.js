@@ -22,7 +22,22 @@ const read = async (req, res, next) => {
   }
 };
 
+const readEventBySalonId = async (req, res, next) => {
+  try {
+    const event = await tables.comment.readEventBySalonId(req.params.id);
+    if (event == null) {
+      res.sendStatus(404);
+    } else {
+      res.json(event);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+
 module.exports = {
   browse,
   read,
+  readEventBySalonId,
 };
