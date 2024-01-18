@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Salon from "./pages/Salon";
 import Borne from "./pages/Borne";
+import OffresById, { offrebyid } from "./pages/OffresById";
 import Ai from "./pages/Ai";
 
 import "./styles/index.scss";
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
       {
         path: "/borne",
         element: <Borne />,
+      },
+      {
+        path: "/OffresById/:id",
+        element: <OffresById />,
+        loader: offrebyid,
       },
       {
         path: "/ai",

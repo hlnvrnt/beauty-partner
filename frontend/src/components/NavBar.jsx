@@ -8,16 +8,19 @@ function NavBar() {
       <div className="logo-container">
         <div className="marque">
           <NavLink to="/">
-          <img src="/images/logo.png" alt="logo" />
+            <img src="/images/logo.png" alt="logo" />
           </NavLink>
+          <div className="img-beauty">
+            <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
+          </div>
         </div>
         <div className="connexion">
           {userInfos.name ? (
             <div className="account-link">
-            <NavLink to="/account">
-              <img src="/images/Avatar.webp" alt="avatar"/>
+              <NavLink to="/account">
+                <img src="/images/Avatar.webp" alt="avatar" />
                 <p>{userInfos.name}</p>
-            </NavLink>
+              </NavLink>
             </div>
           ) : (
             <div className="connexion-lien">
@@ -29,9 +32,6 @@ function NavBar() {
               </NavLink>
             </div>
           )}
-        </div>
-        <div className="img-beauty">
-          <img src="/images/logo-beauty-partner.jpg" alt="logo-beauty" />
         </div>
       </div>
       <div className="pages">

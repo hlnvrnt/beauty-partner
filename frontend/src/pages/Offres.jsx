@@ -1,12 +1,14 @@
+/* eslint-disable prefer-template */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Offre() {
   const [offre, setOffre] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BACKEND_URL}/api//events`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/events`)
       .then((res) => {
         setOffre(res.data);
         console.log(res.data);
@@ -19,8 +21,17 @@ export default function Offre() {
   return (
     <div className="container-page-offre">
       <div className="nouveaute-offre">
-        <h1>NOUVEAUTES</h1>
-        <div className="offre-nouveaute1">;</div>
+        <h1>NOUVEAUTÉS</h1>
+        <div className="rond-nouveauté">
+          {offre.map(
+            (offres, index) =>
+              (index === 1 || index === 5) && (
+                <div className="rond-nouveauté-bis">
+                  <div className={`rond card-${index}`}>{offres.name}</div>
+                </div>
+              )
+          )}
+        </div>
       </div>
       <div className="container-offre">
         <h1>NOS OFFRES</h1>
@@ -33,7 +44,10 @@ export default function Offre() {
               <div className="points-offre">
                 <h2>{offres.value} pts</h2>
                 <h3>{offres.surname}</h3>
-                <p>Découvrez-ici</p>
+                <Link to={`/OffresById/${offres.id}`}>
+                  <p>Découvrez-ici</p>
+                </Link>
+                <button className="achat">Acheter</button>
               </div>
             </div>
           ))}
