@@ -49,7 +49,6 @@ function Register() {
           inputPassword: newSalon.password,
         });
         setUserInfos(res2.data);
-        // setUserInfos(res.data);
         setSubmittedUser([...submittedUser, newSalon]);
         setNewSalon({
           name: "",
