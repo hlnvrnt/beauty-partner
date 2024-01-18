@@ -79,6 +79,16 @@ function Register() {
       <div className="login-connexion-container">
         <div className="login-content-connexion-background">
           <div className="login-content-connexion">
+            {errorMessage !== "" && (
+              <div className="message">
+                <p className="error">{errorMessage}</p>
+              </div>
+            )}
+            {successMessage !== "" && (
+              <div className="message">
+                <p className="error">{successMessage}</p>
+              </div>
+            )}
             <div>
               <h2>Formulaire d'inscription</h2>
               <p className="under-title">L'Oréal BeautyPartner</p>
