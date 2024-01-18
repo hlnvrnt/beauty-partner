@@ -12,7 +12,9 @@ function InnovationAI() {
   return (
     <div className="innovation-container">
       <div className="img-container">
-        <img src="images/innovation.jpg" alt="innovation" />
+        <div className="img-fond">
+          <img src="images/innovation.jpg" alt="innovation" />
+        </div>
       </div>
 
       <div className="content-wrapper">

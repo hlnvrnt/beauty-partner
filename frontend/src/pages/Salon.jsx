@@ -31,14 +31,14 @@ function Salon() {
           </div>
         </div>
         <div className="status-container">
-          <p className="status-title">MEMBRE PRIVILÈGE</p>
+          <p className="status-title">MEMBRE ELITE</p>
           <p>Bénéficiez de votre avantage fidélité ! </p>
 
           <ul className="progressbar">
             <li className="complete" />
             <li className="complete" />
             <li className="complete" />
-            <li className="active">20 000 points atteints</li>
+            <li className="active">50 000 points</li>
             <li />
             <li />
           </ul>

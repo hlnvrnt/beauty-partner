@@ -27,7 +27,7 @@ function Partenaires() {
           </div>
           <div className="img-container">
             <img src="/images/loreal_grandpublic.webp" alt="grand public" />
-            <p>L'Oréale Grand Public</p>
+            <p>L'Oréal Grand Public</p>
           </div>
           <div className="img-container">
             <img src="/images/loreal_beautedermatologique.webp" alt="beauté" />
