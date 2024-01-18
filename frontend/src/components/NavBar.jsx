@@ -8,7 +8,7 @@ function NavBar() {
       <div className="logo-container">
         <div className="marque">
           <NavLink to="/">
-            <img src="/images/logo.jpg" alt="logo" />
+          <img src="/images/logo.png" alt="logo" />
           </NavLink>
         </div>
         <div className="connexion">
