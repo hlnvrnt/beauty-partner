@@ -6,7 +6,7 @@ import { useUser } from "../context/UserContext";
 
 function Login() {
   // todo : importer le setter "setUserInfos" via Useconext
-  const { setUserInfos, userInfos } = useUser();
+  const { setUserInfos } = useUser();
   const navigate = useNavigate();
   const emailRef = useRef();
   const passwordRef = useRef();
